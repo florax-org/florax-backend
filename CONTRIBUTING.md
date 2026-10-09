@@ -1,4 +1,4 @@
-# Contributing to FluxID Protocol
+# Contributing to Florax Protocol
 
 Thank you for your interest in building the liquidity intelligence layer on Stellar — turning any wallet into a real-time, explainable financial identity! This guide will help you contribute effectively.
 

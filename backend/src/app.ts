@@ -21,7 +21,7 @@ export async function buildServer() {
   });
 
   fastify.get('/', async () => ({
-    name: 'FluxID Backend',
+    name: 'Florax Backend',
     description: 'Liquidity Identity scoring service — turn any Stellar wallet into a trust score.',
     status: 'ok',
     network: appConfig.stellarNetwork,
@@ -85,7 +85,7 @@ export async function startServer() {
     const httpServer = fastify.server;
     httpServer.keepAliveTimeout = 65_000;
     httpServer.headersTimeout = 66_000;
-    logger.info(`FluxID Backend running on http://0.0.0.0:${appConfig.port}`);
+    logger.info(`Florax Backend running on http://0.0.0.0:${appConfig.port}`);
     logger.info(`Network: ${appConfig.stellarNetwork}`);
   } catch (err) {
     logger.error(err, 'Failed to start server');

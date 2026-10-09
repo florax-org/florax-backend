@@ -1,4 +1,4 @@
-name: FluxID CI Pipeline
+name: Florax CI Pipeline
 
 on:
   push:

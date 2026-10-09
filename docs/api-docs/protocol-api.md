@@ -1,4 +1,4 @@
-# FluxID Protocol Intelligence API
+# Florax Protocol Intelligence API
 
 Monitor, segment, and alert on entire user bases. These endpoints are designed for institutions, lending protocols, and marketplaces that need to track ecosystem-wide liquidity health.
 

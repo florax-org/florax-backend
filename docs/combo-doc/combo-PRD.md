@@ -1,5 +1,5 @@
 ````md
-# FluxID + AgriTrust Unified Product Requirements Document (PRD)
+# Florax + AgriTrust Unified Product Requirements Document (PRD)
 
 # Version
 
@@ -11,7 +11,7 @@ v2.0
 
 ## Core Infrastructure
 
-# FluxID
+# Florax
 
 > A programmable trust infrastructure that transforms wallet behavior into real-time financial intelligence.
 
@@ -21,13 +21,13 @@ v2.0
 
 # AgriTrust
 
-> A behavioral financial identity and liquidity layer for smallholder farmers powered by FluxID.
+> A behavioral financial identity and liquidity layer for smallholder farmers powered by Florax.
 
 ---
 
 # Executive Summary
 
-FluxID is a programmable behavioral trust infrastructure built on Stellar.
+Florax is a programmable behavioral trust infrastructure built on Stellar.
 
 It transforms wallet activity into:
 
@@ -36,13 +36,13 @@ It transforms wallet activity into:
 - protocol-level monitoring
 - machine-readable financial reputation
 
-AgriTrust is the first major vertical implementation built on top of FluxID.
+AgriTrust is the first major vertical implementation built on top of Florax.
 
-It applies FluxID’s trust infrastructure to one of the world’s largest underserved markets:
+It applies Florax’s trust infrastructure to one of the world’s largest underserved markets:
 
 > Smallholder farmers across emerging economies.
 
-Together, FluxID and AgriTrust create:
+Together, Florax and AgriTrust create:
 
 - A behavioral financial identity layer
 - A programmable trust engine
@@ -66,7 +66,7 @@ This infrastructure enables:
 
 # Vision
 
-## FluxID Vision
+## Florax Vision
 
 To become the programmable trust engine powering financial decisions across platforms, protocols, and autonomous systems.
 
@@ -97,7 +97,7 @@ But they fail to measure:
 - stability
 - reliability over time
 
-FluxID introduces:
+Florax introduces:
 
 > Behavioral Financial Identity.
 
@@ -178,7 +178,7 @@ Most smallholder farmers have none.
 
 # Product Thesis
 
-## FluxID Thesis
+## Florax Thesis
 
 Wallet behavior itself is a trust signal.
 
@@ -192,7 +192,7 @@ By analyzing:
 - activity frequency
 - behavioral drift
 
-FluxID can generate:
+Florax can generate:
 
 - trust scores
 - risk intelligence
@@ -222,14 +222,14 @@ farmers can generate:
 
 # Product Positioning
 
-FluxID is NOT:
+Florax is NOT:
 
 - a wallet tracker
 - another analytics dashboard
 - another lending app
 - another credit bureau
 
-FluxID IS:
+Florax IS:
 
 > A programmable trust infrastructure.
 
@@ -252,7 +252,7 @@ Users / Platforms / AI Agents
                 ↓
             AgriTrust
                 ↓
-             FluxID
+             Florax
                 ↓
    Stellar + Soroban Infrastructure
 ```
@@ -275,7 +275,7 @@ Foundation layer powered by:
 
 ---
 
-# Layer 2 — FluxID Trust Infrastructure
+# Layer 2 — Florax Trust Infrastructure
 
 Core intelligence engine responsible for:
 
@@ -287,13 +287,13 @@ Core intelligence engine responsible for:
 - programmable trust APIs
 - machine-to-machine trust queries
 
-FluxID is infrastructure.
+Florax is infrastructure.
 
 ---
 
 # Layer 3 — AgriTrust Vertical Layer
 
-Specialized implementation built on top of FluxID.
+Specialized implementation built on top of Florax.
 
 Responsible for:
 
@@ -312,7 +312,7 @@ Responsible for:
 
 ## Overview
 
-FluxID analyzes wallet behavior and generates financial trust signals.
+Florax analyzes wallet behavior and generates financial trust signals.
 
 Users can:
 
@@ -551,7 +551,7 @@ to prevent data overlap and incorrect UI behavior.
 
 ## Overview
 
-FluxID evolves beyond single-wallet scoring into:
+Florax evolves beyond single-wallet scoring into:
 
 > Protocol-level financial intelligence infrastructure.
 
@@ -633,7 +633,7 @@ Programmatic access to:
 
 ## Overview
 
-To support real-world protocol integrations, FluxID introduces a background synchronization architecture.
+To support real-world protocol integrations, Florax introduces a background synchronization architecture.
 
 Instead of analyzing partial wallet samples, the system can analyze entire ecosystems.
 
@@ -710,7 +710,7 @@ Scored 1,247 / 4,932 wallets
 
 ## Overview
 
-FluxID evolves beyond fixed scoring into:
+Florax evolves beyond fixed scoring into:
 
 > Programmable trust logic.
 
@@ -721,7 +721,7 @@ External systems can define:
 - risk tolerances
 - behavioral rules
 
-FluxID executes those trust models.
+Florax executes those trust models.
 
 ---
 
@@ -776,7 +776,7 @@ FluxID executes those trust models.
 
 # Overview
 
-AgriTrust is the first major vertical built on top of FluxID.
+AgriTrust is the first major vertical built on top of Florax.
 
 It transforms agricultural behavior into:
 
@@ -821,7 +821,7 @@ Farmer activity is recorded through:
 
 # Step 2 — Trust Analysis
 
-FluxID analyzes:
+Florax analyzes:
 
 - payment consistency
 - transaction stability
@@ -973,7 +973,7 @@ AI translates this into:
 
 ## Overview
 
-FluxID exposes trust infrastructure to autonomous systems.
+Florax exposes trust infrastructure to autonomous systems.
 
 AI agents can:
 
@@ -1102,7 +1102,7 @@ Avoid:
 
 # Monetization Strategy
 
-# FluxID Revenue
+# Florax Revenue
 
 ## API Infrastructure
 
@@ -1227,7 +1227,7 @@ Stellar is ideal because of:
 
 ## Long-Term Vision
 
-FluxID evolves into:
+Florax evolves into:
 
 - decentralized behavioral trust infrastructure
 - programmable financial identity layer
@@ -1267,7 +1267,7 @@ FluxID evolves into:
 
 # Final Product Statement
 
-FluxID transforms wallet behavior into programmable trust infrastructure.
+Florax transforms wallet behavior into programmable trust infrastructure.
 
 AgriTrust applies that infrastructure to one of the world's most underserved financial sectors.
 

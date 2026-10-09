@@ -1,4 +1,4 @@
-# Making FluxID data survive restarts on Render
+# Making Florax data survive restarts on Render
 
 ## The problem
 
@@ -12,7 +12,7 @@ default these are append-only JSONL files on the local filesystem:
 | `wallet_history.jsonl`   | `history.service.ts` (per-wallet score history)     |
 | `protocol_history.jsonl` | `history.service.ts` (Protocol Intelligence cohort) |
 
-By default they live in `<cwd>/data` — see `FLUXID_DATA_DIR` in
+By default they live in `<cwd>/data` — see `FLORAX_DATA_DIR` in
 `metrics.service.ts` and `history.service.ts`.
 
 On Render, that default location is on the **ephemeral filesystem**. It is
@@ -91,12 +91,12 @@ If you're already on a paid Render instance, a mounted disk also works and
 keeps the JSONL files.
 
 1. Backend service → **Settings → Disks → Add Disk**:
-   - **Name:** `fluxid-data` (any name)
+   - **Name:** `florax-data` (any name)
    - **Mount Path:** `/var/data`
    - **Size:** `1 GB` (JSONL is tiny)
 2. **Settings → Environment** → add:
    ```
-   FLUXID_DATA_DIR = /var/data
+   FLORAX_DATA_DIR = /var/data
    ```
    Must match the mount path exactly. The backend does `mkdir -p` on startup.
 3. Save and redeploy. Verify with the same curl steps as Option A.
@@ -130,7 +130,7 @@ message the backend returned. Here's the whole chain.
 | Needs                         | Sourced from                                                         | Notes                                                             |
 | ----------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | `contractId`                  | `MAINNET_CONTRACT_ID` **or** `TESTNET_CONTRACT_ID`                   | picked by the network you analyzed on (`stellar.config.ts:17,23`) |
-| `adminSecret` (oracle signer) | `ORACLE_SECRET_KEY` → `ADMIN_SECRET_KEY` → `FLUXID_ADMIN_SECRET_KEY` | first one set wins (`contract.service.ts:82`)                     |
+| `adminSecret` (oracle signer) | `ORACLE_SECRET_KEY` → `ADMIN_SECRET_KEY` → `FLORAX_ADMIN_SECRET_KEY` | first one set wins (`contract.service.ts:82`)                     |
 
 The oracle key is what signs the `set_score` transaction — the contract stores
 the score, risk, timestamp and a hash of the scoring inputs, then emits a
@@ -188,7 +188,7 @@ mainnet.
 ## One caveat — payment requests
 
 `payment.service.ts` writes `.payment-requests.json` to `process.cwd()`
-directly, **not** to Redis or `FLUXID_DATA_DIR`. These are short-lived payment
+directly, **not** to Redis or `FLORAX_DATA_DIR`. These are short-lived payment
 challenges (they expire via TTL), so losing them on restart is low-impact — a
 user just requests a fresh challenge. Neither option above changes this, and
 none is required for the metrics/feedback durability fix.

@@ -2,9 +2,9 @@
 
 **Reviewer:** TCROWN10 (`@TCROWN10`)  
 **Date:** 2026-08-16 (walkthrough) · **Revised:** 2026-08-20 (scoped to Settings + mobile per review)  
-**Issue:** [#11](https://github.com/StellarVhibes/FluxID/issues/11)  
+**Issue:** [#11](https://github.com/florax-org/florax/issues/11)  
 **Severity:** CRITICAL (mainnet prep)  
-**App under test:** live deploy [https://fluxid.vercel.app](https://fluxid.vercel.app)  
+**App under test:** live deploy [https://florax.vercel.app](https://florax.vercel.app)  
 **Viewports:** 1440×900 (desktop), 375×812 (iPhone-class), 320×640 (narrow)
 
 Screenshots: [`docs/grantfox-OSS/issue11-QA_settings_transfer_mobile/`](../grantfox-OSS/issue11-QA_settings_transfer_mobile/)
@@ -15,10 +15,10 @@ Transfer / Send Liquidity is **out of scope** for this revision. That section, i
 
 ## How I walked it
 
-Started at `/dashboard/settings` with `fluxid_onboarding_seen=true` (otherwise the first-run tour covers every shot). Then:
+Started at `/dashboard/settings` with `florax_onboarding_seen=true` (otherwise the first-run tour covers every shot). Then:
 
 1. Clicked Light / Dark / System, reloaded after each, and read `localStorage.theme` plus `document.documentElement.className`.
-2. Flipped all three notification switches (ON/ON/OFF → OFF/OFF/ON), reloaded, and compared the UI to `localStorage.fluxid-notifications`.
+2. Flipped all three notification switches (ON/ON/OFF → OFF/OFF/ON), reloaded, and compared the UI to `localStorage.florax-notifications`.
 3. Clicked **Save Changes**, then the header sun/moon while Settings still had **System** selected.
 4. Collapsed / re-expanded the desktop rail and measured `--sidebar-width` against the shell’s `left`.
 5. Repeated Settings at 375 px and 320 px, including a horizontal swipe of the bottom nav. Checked Dashboard at 320 px for clipping.
@@ -30,7 +30,7 @@ In-app feedback was sent once from the floating button; the toast read **“Than
 
 ## Wallets scored
 
-FluxID is address-based — any `G…` key should score. Three wallets from `docs/demo-wallets.txt`, all mainnet:
+Florax is address-based — any `G…` key should score. Three wallets from `docs/demo-wallets.txt`, all mainnet:
 
 | Wallet | How it was scored | Result |
 |--------|-------------------|--------|
@@ -49,7 +49,7 @@ A fourth address from the seed list, `GB63YPQH…`, returned Horizon **503** on 
 | Criterion | Result | Notes |
 |-----------|--------|-------|
 | Theme Light/Dark/System persists after reload | **PASS** | `localStorage.theme` = `light` / `dark` / `system`. System with OS dark → `html` class `dark`. |
-| Three notification prefs persist after reload | **PASS** | Writes happen on each toggle (`fluxid-notifications`). After reload the knobs matched `{"scoreAlerts":false,"transactionAlerts":false,"weeklyReports":true}`. |
+| Three notification prefs persist after reload | **PASS** | Writes happen on each toggle (`florax-notifications`). After reload the knobs matched `{"scoreAlerts":false,"transactionAlerts":false,"weeklyReports":true}`. |
 | Sidebar collapse works on desktop | **PASS** | 248 px → 80 px. `--sidebar-width: 80px`, shell `left: 108px`, heading left-edge 184 px — no overlap. |
 | Mobile bottom-nav is horizontally scrollable and grouped | **PASS** | At 375 px: `scrollWidth` 708 / `clientWidth` 343. Groups are Wallet Intelligence → Protocol Intelligence → General, with a right-edge fade. |
 | No overflow / clipped content at narrow widths (Settings + Dashboard) | **FAIL** | Page `scrollWidth` equals the viewport (no horizontal page scroll). **Save Changes** sits under the Feedback FAB; the **Analyze** button sticks 12 px past 320 px. See BUG-01, BUG-05. |
@@ -71,7 +71,7 @@ That part is solid. The leak is the **header** control, which is not the same th
 
 ### Notification toggles
 
-Defaults on a first visit (no `fluxid-notifications` key): Score Alerts **on**, Transaction Alerts **on**, Weekly Reports **off**. That matches `DEFAULT_NOTIFICATIONS` in `frontend/app/dashboard/settings/page.tsx`.
+Defaults on a first visit (no `florax-notifications` key): Score Alerts **on**, Transaction Alerts **on**, Weekly Reports **off**. That matches `DEFAULT_NOTIFICATIONS` in `frontend/app/dashboard/settings/page.tsx`.
 
 Each switch writes immediately:
 
@@ -97,7 +97,7 @@ On 1440×900 the Save control’s box was `top: 855 / bottom: 900` — flush wit
 The header Bell has no `onClick`. Nothing in the backend is consulted. For mainnet prep these three switches currently change a JSON blob in the browser and that is all.
 
 **OBS-03 (LOW) — dead `ThemeToggle`.**  
-`frontend/components/ThemeToggle.tsx` is not mounted. It writes `fluxid-theme` and `data-theme`. Live theme is `next-themes` (`providers.tsx`) plus localStorage key `theme`. Two systems, only one is wired.
+`frontend/components/ThemeToggle.tsx` is not mounted. It writes `florax-theme` and `data-theme`. Live theme is `next-themes` (`providers.tsx`) plus localStorage key `theme`. Two systems, only one is wired.
 
 ---
 
@@ -140,7 +140,7 @@ Weekly Reports + Save Changes require inner scroll on 320 / 375 because the bott
 | BUG-04 | MEDIUM | Settings / Header | Header theme toggle forces light/dark and drops System | `frontend/app/components/Header.tsx` |
 | BUG-05 | MEDIUM | Dashboard mobile | Analyze button overflows 12 px at 320 px | `frontend/app/dashboard/components/AnalyzeBar.tsx` |
 | OBS-02 | LOW | Settings | Notification switches persist locally; header Bell is inert; no delivery | `settings/page.tsx`; `Header.tsx` |
-| OBS-03 | LOW | Dead code | `ThemeToggle.tsx` uses `fluxid-theme` / `data-theme` and is not mounted; live theme is `next-themes` + `theme` | `ThemeToggle.tsx` vs `providers.tsx` |
+| OBS-03 | LOW | Dead code | `ThemeToggle.tsx` uses `florax-theme` / `data-theme` and is not mounted; live theme is `next-themes` + `theme` | `ThemeToggle.tsx` vs `providers.tsx` |
 
 Suggested direction (not implemented in this PR — report only):
 
@@ -194,4 +194,4 @@ All under `docs/grantfox-OSS/issue11-QA_settings_transfer_mobile/`:
 
 ---
 
-*Walked 2026-08-16 against https://fluxid.vercel.app; scoped 2026-08-20 — @TCROWN10*
+*Walked 2026-08-16 against https://florax.vercel.app; scoped 2026-08-20 — @TCROWN10*

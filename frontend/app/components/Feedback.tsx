@@ -10,7 +10,7 @@ import { submitFeedback } from "../../lib/metricsApi";
 import { FEEDBACK_FORM_URL } from "../../lib/constants";
 
 // Custom event name other components dispatch to open this modal.
-export const OPEN_FEEDBACK_EVENT = "fluxid:open-feedback";
+export const OPEN_FEEDBACK_EVENT = "florax:open-feedback";
 
 // App-wide feedback widget: a floating button that expands on hover to reveal
 // a short CTA with links to the Google Form and the in-app feedback modal.

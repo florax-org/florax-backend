@@ -20,7 +20,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
             {/* Background Image */}
             <div className="absolute inset-0 flex items-center justify-end pointer-events-none z-0">
               <img 
-                src="/3d-imgs-assest/fluxid_hero_illustration.png" 
+                src="/3d-imgs-assest/florax_hero_illustration.png" 
                 alt="Dashboard Background" 
                 className="w-[800px] md:w-[1200px] max-w-none object-contain opacity-[0.15] -rotate-12 blur-[2px] translate-x-32"
               />

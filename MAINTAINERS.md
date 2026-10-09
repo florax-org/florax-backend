@@ -1,4 +1,4 @@
-# Maintainers - FluxID Protocol
+# Maintainers - Florax Protocol
 
 The current maintainers of this project are:
 
@@ -14,4 +14,4 @@ Maintainers are responsible for:
 
 ---
 
-*FluxID — Liquidity Identity Layer on Stellar*
+*Florax — Liquidity Identity Layer on Stellar*

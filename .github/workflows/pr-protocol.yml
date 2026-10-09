@@ -1,4 +1,4 @@
-name: FluxID PR Protocol
+name: Florax PR Protocol
 
 on:
   pull_request_target:

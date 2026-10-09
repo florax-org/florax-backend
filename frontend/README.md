@@ -1,4 +1,4 @@
-# FluxID — Frontend
+# Florax — Frontend
 
 **Liquidity Identity Layer on Stellar** — Turn any wallet into a real-time financial identity.
 
@@ -10,7 +10,7 @@
 
 ## Overview
 
-Next.js PWA frontend for FluxID — analyzes Stellar wallets and displays liquidity scores with AI insights.
+Next.js PWA frontend for Florax — analyzes Stellar wallets and displays liquidity scores with AI insights.
 
 ### Key Pages
 
@@ -32,16 +32,16 @@ Next.js PWA frontend for FluxID — analyzes Stellar wallets and displays liquid
 
 | File | What It Does |
 |------|------------|
-| [FreighterContext.tsx](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/context/FreighterContext.tsx#L27) | Full wallet state management |
-| [useFreighter hook](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/context/FreighterContext.tsx#L189) | Connect/disconnect functions |
-| [Header connection](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/components/Header.tsx#L12) | Connect button in header |
+| [FreighterContext.tsx](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx#L27) | Full wallet state management |
+| [useFreighter hook](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx#L189) | Connect/disconnect functions |
+| [Header connection](https://github.com/florax-org/florax/blob/main/frontend/app/components/Header.tsx#L12) | Connect button in header |
 
 ### Analyze Bar
 
 | File | What It Does |
 |------|------------|
-| [AnalyzeBar.tsx](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/dashboard/components/AnalyzeBar.tsx) | Address input + Analyze button |
-| [Auto-fill](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/dashboard/components/AnalyzeBar.tsx#L26) | Uses connected wallet |
+| [AnalyzeBar.tsx](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/components/AnalyzeBar.tsx) | Address input + Analyze button |
+| [Auto-fill](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/components/AnalyzeBar.tsx#L26) | Uses connected wallet |
 
 ---
 
@@ -51,15 +51,15 @@ Next.js PWA frontend for FluxID — analyzes Stellar wallets and displays liquid
 
 | File | What It Does |
 |------|------------|
-| [ExplanationCard.tsx](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/components/ExplanationCard.tsx) | AI-generated insights display |
-| [FlowSummary.tsx](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/components/FlowSummary.tsx) | Analytics cards (inflow/outflow/swaps) |
+| [ExplanationCard.tsx](https://github.com/florax-org/florax/blob/main/frontend/app/components/ExplanationCard.tsx) | AI-generated insights display |
+| [FlowSummary.tsx](https://github.com/florax-org/florax/blob/main/frontend/app/components/FlowSummary.tsx) | Analytics cards (inflow/outflow/swaps) |
 
 ### Score Display
 
 | File | What It Does |
 |------|------------|
-| [AnimatedScore](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/components/AnimatedScore.tsx) | Animated score gauge |
-| [OnChainBadge](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/components/OnChainBadge.tsx) | On-chain verification badge |
+| [AnimatedScore](https://github.com/florax-org/florax/blob/main/frontend/app/components/AnimatedScore.tsx) | Animated score gauge |
+| [OnChainBadge](https://github.com/florax-org/florax/blob/main/frontend/app/components/OnChainBadge.tsx) | On-chain verification badge |
 
 ---
 
@@ -67,9 +67,9 @@ Next.js PWA frontend for FluxID — analyzes Stellar wallets and displays liquid
 
 | File | What It Does |
 |------|------------|
-| [AgentDemo.tsx](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/components/AgentDemo.tsx) | Full X402 payment demo |
-| [agentDemo.ts](https://github.com/StellarVhibes/FluxID/blob/main/frontend/lib/agentDemo.ts) | Request + signing logic |
-| [Freighter signing](https://github.com/StellarVhibes/FluxID/blob/main/frontend/lib/agentDemo.ts#L10) | Transaction signing |
+| [AgentDemo.tsx](https://github.com/florax-org/florax/blob/main/frontend/app/components/AgentDemo.tsx) | Full X402 payment demo |
+| [agentDemo.ts](https://github.com/florax-org/florax/blob/main/frontend/lib/agentDemo.ts) | Request + signing logic |
+| [Freighter signing](https://github.com/florax-org/florax/blob/main/frontend/lib/agentDemo.ts#L10) | Transaction signing |
 
 ---
 
@@ -77,8 +77,8 @@ Next.js PWA frontend for FluxID — analyzes Stellar wallets and displays liquid
 
 | File | What It Does |
 |------|------------|
-| [scoring.ts](https://github.com/StellarVhibes/FluxID/blob/main/frontend/lib/scoring.ts) | Client-side scoring utilities |
-| [Transaction types](https://github.com/StellarVhibes/FluxID/blob/main/frontend/lib/scoring.ts#L34) | inflow/outflow/swap tracking |
+| [scoring.ts](https://github.com/florax-org/florax/blob/main/frontend/lib/scoring.ts) | Client-side scoring utilities |
+| [Transaction types](https://github.com/florax-org/florax/blob/main/frontend/lib/scoring.ts#L34) | inflow/outflow/swap tracking |
 
 ---
 
@@ -86,8 +86,8 @@ Next.js PWA frontend for FluxID — analyzes Stellar wallets and displays liquid
 
 | File | What It Does |
 |------|------------|
-| [Onboarding.tsx](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/components/Onboarding.tsx) | Welcome tour flow |
-| [Tour steps](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/components/Onboarding.tsx#L17) | Dashboard walkthrough |
+| [Onboarding.tsx](https://github.com/florax-org/florax/blob/main/frontend/app/components/Onboarding.tsx) | Welcome tour flow |
+| [Tour steps](https://github.com/florax-org/florax/blob/main/frontend/app/components/Onboarding.tsx#L17) | Dashboard walkthrough |
 
 ---
 
@@ -116,8 +116,8 @@ npm run dev
 
 ## Related
 
-- [FluxID Backend](https://github.com/StellarVhibes/FluxID) - Node.js scoring engine
-- [FluxID Smart Contracts](https://github.com/StellarVhibes/FluxID) - Soroban contracts
+- [Florax Backend](https://github.com/florax-org/florax) - Node.js scoring engine
+- [Florax Smart Contracts](https://github.com/florax-org/florax) - Soroban contracts
 
 ---
 

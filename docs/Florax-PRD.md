@@ -1,14 +1,14 @@
-# Flux-PRD.md - Product Requirements Document
+# Florax-PRD.md - Product Requirements Document
 
 ---
 
 ## Overview
 
-FluxID is a liquidity intelligence layer built on Stellar that turns any wallet into a real-time financial identity.
+Florax is a liquidity intelligence layer built on Stellar that turns any wallet into a real-time financial identity.
 
-Instead of just showing balances or transaction history, FluxID looks at _how money behaves_ — how it flows in, flows out, and how stable that flow is over time.
+Instead of just showing balances or transaction history, Florax looks at _how money behaves_ — how it flows in, flows out, and how stable that flow is over time.
 
-At its core, FluxID does one thing:
+At its core, Florax does one thing:
 
 **It turns wallet behavior into a simple trust score.**
 
@@ -49,7 +49,7 @@ There’s no simple way for that freelancer to prove:
 
 ## Solution
 
-FluxID introduces a **Liquidity Identity** — a dynamic score that reflects how money moves through a wallet over time.
+Florax introduces a **Liquidity Identity** — a dynamic score that reflects how money moves through a wallet over time.
 
 It analyzes:
 
@@ -64,9 +64,9 @@ And produces:
 - A simple **risk signal (Low / Medium / High)**
 - A clear view of financial behavior
 
-## What FluxID Really Is (In Simple Terms)
+## What Florax Really Is (In Simple Terms)
 
-FluxID is not just an app or a dashboard.
+Florax is not just an app or a dashboard.
 
 It is a **decision layer**.
 
@@ -88,7 +88,7 @@ Think of it this way:
 
 Instead of uncertainty, platforms now have a **clear, behavior-based signal**.
 
-FluxID analyzes wallet transaction history and returns:
+Florax analyzes wallet transaction history and returns:
 
 A Liquidity Score
 A Risk Level
@@ -172,7 +172,7 @@ Right now:
 - Web2 → Credit scores (slow, country-based)
 - Web3 → No trust layer
 
-FluxID introduces:
+Florax introduces:
 
 > A real-time trust layer based on actual financial behavior.
 
@@ -186,7 +186,7 @@ Better because:
 
 ## Important Clarification
 
-FluxID is not trying to replace or build all these platforms.
+Florax is not trying to replace or build all these platforms.
 
 It is building the **infrastructure they can use**.
 
@@ -204,15 +204,15 @@ Instead, frame it as:
 
 Example:
 
-“A lending platform can use FluxID to decide who to give loans to instantly.”
+“A lending platform can use Florax to decide who to give loans to instantly.”
 
 ---
 
 ## One-Line Definition
 
-If asked “What is FluxID?”:
+If asked “What is Florax?”:
 
-> “FluxID turns wallet transaction history into a simple trust score that other platforms can use to make financial decisions.”
+> “Florax turns wallet transaction history into a simple trust score that other platforms can use to make financial decisions.”
 
 ---
 
@@ -229,7 +229,7 @@ This approach gives:
 
 ## Final Note
 
-This shifts FluxID from:
+This shifts Florax from:
 
 “a cool product”
 
@@ -239,7 +239,7 @@ to:
 
 ### Core Principle
 
-FluxID focuses on **one core function**:
+Florax focuses on **one core function**:
 
 > Turn wallet history into a trust score.
 
@@ -249,7 +249,7 @@ Everything else (dashboard, suggestions, visuals) exists to support and explain 
 
 ## Target User (Focused MVP Entry Point)
 
-While FluxID is designed as a general-purpose trust layer that any platform can use, the MVP focuses on a specific starting point:
+While Florax is designed as a general-purpose trust layer that any platform can use, the MVP focuses on a specific starting point:
 
 **Freelancers in emerging markets (starting with West Africa).**
 
@@ -261,7 +261,7 @@ While FluxID is designed as a general-purpose trust layer that any platform can 
 
 This group provides a clear, real-world use case to demonstrate how wallet-based trust scoring can solve actual financial problems.
 
-## Over time, FluxID expands beyond this group into a broader infrastructure layer usable by lending platforms, marketplaces, and other financial systems.
+## Over time, Florax expands beyond this group into a broader infrastructure layer usable by lending platforms, marketplaces, and other financial systems.
 
 ## MVP Features (5-Day Build Sprint)
 
@@ -373,7 +373,7 @@ Clean, fast, demo-ready.
 
 ## Project Execution & Phases
 
-FluxID is structured across three definitive phases. This ensures we deliver on our promises step by step.
+Florax is structured across three definitive phases. This ensures we deliver on our promises step by step.
 
 - ✅ **Phase 1: MVP (Single Wallet Scoring) — COMPLETED**
   Core scoring logic, AI insights, and address-based analysis are live.
@@ -397,17 +397,17 @@ FluxID is structured across three definitive phases. This ensures we deliver on 
 
 ### Overview
 
-After the MVP phase, FluxID evolves beyond single-wallet analysis into a broader intelligence layer designed for platforms, not just individual users.
+After the MVP phase, Florax evolves beyond single-wallet analysis into a broader intelligence layer designed for platforms, not just individual users.
 
-In the MVP, FluxID answers:
+In the MVP, Florax answers:
 
 > “Can this wallet be trusted?”
 
-Post-MVP, FluxID expands to answer:
+Post-MVP, Florax expands to answer:
 
 > “What is the financial health of an entire user base, and how is it changing over time?”
 
-This shift moves FluxID from:
+This shift moves Florax from:
 
 - A scoring tool for individual wallets
 
@@ -415,7 +415,7 @@ To:
 
 - A **protocol-level risk intelligence system** that platforms can rely on for decision-making
 
-This is where FluxID begins to transition into real infrastructure.
+This is where Florax begins to transition into real infrastructure.
 
 ---
 
@@ -551,9 +551,9 @@ Rather than reacting after problems occur, platforms are alerted in real time.
 
 ### 5. AI Agent Integration (Advanced Layer)
 
-FluxID becomes accessible not only to human users but also to autonomous systems.
+Florax becomes accessible not only to human users but also to autonomous systems.
 
-This allows AI agents and backend services to directly interact with FluxID for decision-making.
+This allows AI agents and backend services to directly interact with Florax for decision-making.
 
 #### Capabilities
 
@@ -571,14 +571,14 @@ This allows AI agents and backend services to directly interact with FluxID for 
 
 #### Value
 
-- Extends FluxID into machine-to-machine ecosystems
+- Extends Florax into machine-to-machine ecosystems
 - Enables real-time, automated financial decisions
-- Positions FluxID as a foundational data layer for intelligent systems
+- Positions Florax as a foundational data layer for intelligent systems
 
 
 ### Scalable Protocol Sync Engine (Advanced)”
 
-To support real-world protocol integrations, FluxID will introduce a background synchronization system that enables full user-base analysis.
+To support real-world protocol integrations, Florax will introduce a background synchronization system that enables full user-base analysis.
 
 Instead of relying on partial or manually supplied wallet lists, this system will:
 
@@ -607,7 +607,7 @@ This is an advanced extension of Phase 2 and will be introduced incrementally to
 
 ## Strategic Positioning
 
-With the Protocol Intelligence Layer, FluxID evolves into:
+With the Protocol Intelligence Layer, Florax evolves into:
 
 > A programmable trust layer for financial systems
 
@@ -639,7 +639,7 @@ The Protocol Intelligence Layer builds on top of a stable and trusted core syste
 
 ## Long-Term Vision
 
-As these capabilities mature, FluxID becomes:
+As these capabilities mature, Florax becomes:
 
 - A **credit layer for Web3**
 - A **risk intelligence API for platforms**
@@ -655,5 +655,5 @@ It enables a future where:
 
 ## Naming
 
-- Product: **FluxID**
+- Product: **Florax**
 - Concept: **Liquidity Identity Layer**

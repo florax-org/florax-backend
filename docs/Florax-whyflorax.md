@@ -1,12 +1,12 @@
-# FluxID — Funding Positioning & Ecosystem Alignment
+# Florax — Funding Positioning & Ecosystem Alignment
 
-This document outlines how FluxID aligns with core funding principles, ecosystem priorities, and long-term infrastructure value within the Stellar network.
+This document outlines how Florax aligns with core funding principles, ecosystem priorities, and long-term infrastructure value within the Stellar network.
 
 ---
 
 ## 1. Problem–Market Fit
 
-FluxID is built around a clear and persistent problem:
+Florax is built around a clear and persistent problem:
 
 > There is no reliable way to measure financial trust using wallet behavior in Web3.
 
@@ -32,7 +32,7 @@ In Web3:
 
 ### Our Approach
 
-FluxID focuses on one core function:
+Florax focuses on one core function:
 
 > Turn wallet transaction history into a simple, explainable trust score.
 
@@ -42,7 +42,7 @@ This is a **repeatable, data-driven problem** with clear demand across multiple 
 
 ## 2. Ecosystem Alignment (Stellar Fit)
 
-FluxID is purpose-built for the Stellar ecosystem.
+Florax is purpose-built for the Stellar ecosystem.
 
 ### Why Stellar
 
@@ -50,9 +50,9 @@ FluxID is purpose-built for the Stellar ecosystem.
 - High transaction volume → rich behavioral data
 - Strong adoption in emerging markets
 
-### How FluxID Integrates
+### How Florax Integrates
 
-FluxID builds on existing infrastructure rather than replacing it:
+Florax builds on existing infrastructure rather than replacing it:
 
 - Uses Horizon / RPC for transaction data
 - Integrates with Stellar wallets (e.g. Freighter)
@@ -60,7 +60,7 @@ FluxID builds on existing infrastructure rather than replacing it:
 
 ### Ecosystem Role
 
-FluxID acts as:
+Florax acts as:
 
 > A trust and risk layer for financial activity on Stellar
 
@@ -75,11 +75,11 @@ This supports:
 
 ## 3. Trust as Infrastructure
 
-FluxID is not just a feature — it is a trust primitive.
+Florax is not just a feature — it is a trust primitive.
 
 ### Core Function
 
-FluxID enables platforms to answer:
+Florax enables platforms to answer:
 
 > “Can this wallet be trusted financially?”
 
@@ -93,7 +93,7 @@ FluxID enables platforms to answer:
 
 Trust is the foundation of financial systems.
 
-FluxID enables:
+Florax enables:
 
 - Faster decisions
 - Reduced uncertainty
@@ -103,7 +103,7 @@ FluxID enables:
 
 ## 4. Product Philosophy
 
-FluxID is built as infrastructure, not just a user-facing app.
+Florax is built as infrastructure, not just a user-facing app.
 
 ### What This Means
 
@@ -130,7 +130,7 @@ Wallet connection is optional and used only for:
 
 ## 5. Build in Public (Visibility Strategy)
 
-FluxID is developed transparently.
+Florax is developed transparently.
 
 ### Approach
 
@@ -152,7 +152,7 @@ This increases:
 
 ## 6. Product Readiness
 
-FluxID is designed to be functional and demonstrable within a short build cycle.
+Florax is designed to be functional and demonstrable within a short build cycle.
 
 ### MVP Capabilities
 
@@ -173,7 +173,7 @@ This creates an immediate and intuitive understanding of value.
 
 ## 7. Users & Adoption Strategy
 
-FluxID is infrastructure, but adoption starts with a focused entry point.
+Florax is infrastructure, but adoption starts with a focused entry point.
 
 ### Initial Target
 
@@ -201,13 +201,13 @@ FluxID is infrastructure, but adoption starts with a focused entry point.
 
 Adoption depends on perceived value versus perceived risk.
 
-### How FluxID Reduces Risk
+### How Florax Reduces Risk
 
 - Makes financial behavior visible
 - Provides simple, interpretable scores
 - Removes ambiguity in decision-making
 
-### How FluxID Creates Opportunity
+### How Florax Creates Opportunity
 
 - Enables access to credit
 - Improves payment terms
@@ -217,13 +217,13 @@ Adoption depends on perceived value versus perceived risk.
 
 ## 9. Strategic Positioning
 
-FluxID is not:
+Florax is not:
 
 - A dashboard
 - A portfolio tracker
 - A basic analytics tool
 
-FluxID is:
+Florax is:
 
 > A programmable trust layer for financial systems.
 
@@ -237,7 +237,7 @@ It transforms raw transaction data into:
 
 ## 10. Alignment with Funding Principles
 
-FluxID aligns strongly with key funding criteria:
+Florax aligns strongly with key funding criteria:
 
 ### Problem Fit
 
@@ -263,7 +263,7 @@ FluxID aligns strongly with key funding criteria:
 
 ## Final Note
 
-FluxID is not just a product.
+Florax is not just a product.
 
 It is a foundational layer for financial trust in Web3.
 

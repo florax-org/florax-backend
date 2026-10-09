@@ -200,7 +200,7 @@ function WeeklyTrend({
     >
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
         <img 
-          src="/3d-imgs-assest/fluxid_behavioral_graph.png" 
+          src="/3d-imgs-assest/florax_behavioral_graph.png" 
           alt="Behavior Graph" 
           className="w-full h-full object-cover opacity-10 mix-blend-screen"
         />

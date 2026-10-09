@@ -198,7 +198,7 @@ export default function ProtocolDashboard() {
       };
 
       const lines: string[] = [];
-      lines.push("FluxID Protocol Intelligence Report");
+      lines.push("Florax Protocol Intelligence Report");
       lines.push(`Generated,${health.generatedAt}`);
       lines.push(`Network,${health.network}`);
       lines.push("");
@@ -237,7 +237,7 @@ export default function ProtocolDashboard() {
       const link = document.createElement("a");
       link.href = url;
       const stamp = new Date().toISOString().slice(0, 10);
-      link.download = `fluxid-protocol-${health.network}-${stamp}.csv`;
+      link.download = `florax-protocol-${health.network}-${stamp}.csv`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -800,7 +800,7 @@ export default function ProtocolDashboard() {
       >
         <div className="absolute inset-0 flex items-center justify-start pointer-events-none z-0">
           <img 
-            src="/3d-imgs-assest/fluxid_protocol_intelligence.png" 
+            src="/3d-imgs-assest/florax_protocol_intelligence.png" 
             alt="Protocol Background" 
             className="w-[400px] object-contain opacity-[0.08] translate-y-12 -translate-x-12 mix-blend-screen"
           />
@@ -817,7 +817,7 @@ export default function ProtocolDashboard() {
             GET /protocol/health
           </code>
           <a 
-            href="https://github.com/StellarVhibes/FluxID/blob/main/docs/api-docs/README.md"
+            href="https://github.com/florax-org/florax/blob/main/docs/api-docs/README.md"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--primary)] text-sm font-bold flex items-center gap-1 hover:underline"

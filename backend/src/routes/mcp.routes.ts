@@ -9,7 +9,7 @@ import { logger } from '../utils/logger.js';
 const ANALYZE_WALLET_TOOL = {
   name: 'analyze_wallet',
   description:
-    'Analyze a Stellar wallet and return its FluxID liquidity score (0-100), ' +
+    'Analyze a Stellar wallet and return its Florax liquidity score (0-100), ' +
     'risk level (Low/Medium/High), human-readable explanation (insight + suggestions), ' +
     'and full metrics. Use this to assess a wallet\'s financial reliability.',
   input_schema: {

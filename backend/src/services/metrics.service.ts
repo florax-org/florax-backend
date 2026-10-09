@@ -9,19 +9,19 @@ import { logger } from '../utils/logger.js';
 //   1. Upstash Redis — when UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN
 //      are set. Durable across restarts/redeploys, so this is what production
 //      (Render free tier, whose disk is ephemeral) should use.
-//   2. Append-only JSONL files under FLUXID_DATA_DIR — the zero-config fallback
+//   2. Append-only JSONL files under FLORAX_DATA_DIR — the zero-config fallback
 //      for local dev and any deploy without Redis configured.
 //
 // Both store the SAME UsageEvent / FeedbackEntry shapes, so everything below
 // the append/readLines primitives is backend-agnostic.
 
-const DATA_DIR = process.env.FLUXID_DATA_DIR || path.join(process.cwd(), 'data');
+const DATA_DIR = process.env.FLORAX_DATA_DIR || path.join(process.cwd(), 'data');
 const EVENTS_FILE = path.join(DATA_DIR, 'events.jsonl');
 const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback.jsonl');
 
 // Redis list keys, keyed by the same basenames used for the JSONL files.
-const EVENTS_KEY = 'fluxid:events';
-const FEEDBACK_KEY = 'fluxid:feedback';
+const EVENTS_KEY = 'florax:events';
+const FEEDBACK_KEY = 'florax:feedback';
 
 // Lazily construct the Redis client so the module still imports cleanly when
 // the env vars are absent (fallback path). Null means "use JSONL files".

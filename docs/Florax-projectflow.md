@@ -1,6 +1,6 @@
-# FluxID Project Flow
+# Florax Project Flow
 
-A comprehensive guide to FluxID's architecture, request flow, and team responsibilities.
+A comprehensive guide to Florax's architecture, request flow, and team responsibilities.
 
 ---
 
@@ -32,7 +32,7 @@ A comprehensive guide to FluxID's architecture, request flow, and team responsib
 
 ## Core Product Principle
 
-FluxID must be able to score **ANY wallet address** without requiring ownership.
+Florax must be able to score **ANY wallet address** without requiring ownership.
 
 This enables:
 
@@ -353,7 +353,7 @@ Constraints:
 
 ## Future: Agentic Access (X402)
 
-FluxID can support AI agents querying wallet scores.
+Florax can support AI agents querying wallet scores.
 
 **Future possibilities:**
 
@@ -367,13 +367,13 @@ FluxID can support AI agents querying wallet scores.
 
 ## Summary
 
-FluxID flow:
+Florax flow:
 
 ```
 Wallet → Transactions → Normalization → Scoring → Explanation → Decision
 ```
 
-This document defines the source of truth for how FluxID works.
+This document defines the source of truth for how Florax works.
 
 ---
 

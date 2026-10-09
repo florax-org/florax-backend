@@ -149,7 +149,7 @@ export default function ContractPage() {
           </h1>
           <p style={{ color: "var(--foreground-muted)", fontSize: 14 }}>
             {isAdmin
-              ? "Directly interact with the FluxID Soroban smart contract via RPC."
+              ? "Directly interact with the Florax Soroban smart contract via RPC."
               : "Look up any wallet's on-chain liquidity score directly from the contract."}
           </p>
         </div>

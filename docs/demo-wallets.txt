@@ -1,4 +1,4 @@
-# FluxID Protocol Intelligence — demo wallet seed list
+# Florax Protocol Intelligence — demo wallet seed list
 #
 # Paste the addresses below into the "Add Wallets" panel on
 # /dashboard/protocol to populate the dashboard with real,

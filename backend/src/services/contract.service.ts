@@ -82,7 +82,7 @@ export class ContractService {
     const secretRaw =
       process.env.ORACLE_SECRET_KEY ||
       process.env.ADMIN_SECRET_KEY ||
-      process.env.FLUXID_ADMIN_SECRET_KEY;
+      process.env.FLORAX_ADMIN_SECRET_KEY;
     this.adminSecret = secretRaw ? secretRaw.trim().replace(/['"]/g, '') : undefined;
   }
 

@@ -1,11 +1,11 @@
 npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
 
-> fluxid-frontend@0.1.0 test
+> florax-frontend@0.1.0 test
 > vitest run
 
 [33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
 
- RUN  v2.1.9 /Users/joaquinpappa/programming/grantfox/FluxID/frontend
+ RUN  v2.1.9 /Users/joaquinpappa/programming/grantfox/Florax/frontend
 
  ✓ lib/protocolApi.test.ts (7 tests) 5ms
  ✓ lib/freighterDetect.test.ts (5 tests) 2ms

@@ -38,15 +38,15 @@ vi.mock('./horizon.service.js', () => ({
 let tmpDir: string;
 
 beforeEach(async () => {
-  tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'fluxid-protocol-test-'));
-  process.env.FLUXID_DATA_DIR = tmpDir;
+  tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'florax-protocol-test-'));
+  process.env.FLORAX_DATA_DIR = tmpDir;
   horizonCalls.count = 0;
   vi.resetModules();
 });
 
 afterEach(async () => {
   await fs.rm(tmpDir, { recursive: true, force: true });
-  delete process.env.FLUXID_DATA_DIR;
+  delete process.env.FLORAX_DATA_DIR;
 });
 
 async function loadProtocol() {

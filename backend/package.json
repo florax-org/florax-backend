@@ -1,7 +1,7 @@
 {
-  "name": "fluxid-backend",
+  "name": "florax-backend",
   "version": "1.0.0",
-  "description": "FluxID Backend - Liquidity Identity Scoring Service",
+  "description": "Florax Backend - Liquidity Identity Scoring Service",
   "main": "dist/app.js",
   "type": "module",
   "scripts": {

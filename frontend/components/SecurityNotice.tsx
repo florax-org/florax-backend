@@ -24,7 +24,7 @@ export default function SecurityNotice() {
       <div className="flex-1 min-w-0">
         <p style={{ color: "var(--foreground-muted)", fontSize: 12, lineHeight: 1.6 }}>
           <span style={{ color: "#B8891A", fontWeight: 800 }}>Heads up — </span>
-          FluxID is still under development. Analysis results are for informational purposes only and should not be considered financial advice.
+          Florax is still under development. Analysis results are for informational purposes only and should not be considered financial advice.
         </p>
       </div>
       <button

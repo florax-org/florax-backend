@@ -2,7 +2,7 @@
 **Issue:** [QA] Transactions: filters, swaps, mobile vs desktop  
 **Reporter:** bakarezainab  
 **Date:** 2026-08-20  
-**Environment:** Live — https://fluxid.vercel.app/dashboard/transactions  
+**Environment:** Live — https://florax.vercel.app/dashboard/transactions  
 **Branch tested against:** `main` (deployed to Vercel)  
 **Severity:** 🟡 CRITICAL (mainnet prep)
 

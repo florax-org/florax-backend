@@ -1,4 +1,4 @@
-# FluxID
+# Florax
 
 **Liquidity Identity Layer on Stellar — Turn any wallet into a real-time financial identity.**
 
@@ -9,13 +9,13 @@
 
 ## Overview
 
-FluxID is a liquidity intelligence layer built on **Stellar** that turns any wallet into a real-time financial identity.
+Florax is a liquidity intelligence layer built on **Stellar** that turns any wallet into a real-time financial identity.
 
-Instead of just showing balances, FluxID analyzes **how money behaves**, inflow patterns, outflow stability, transaction frequency, and flow consistency and produces a simple, explainable trust score.
+Instead of just showing balances, Florax analyzes **how money behaves**, inflow patterns, outflow stability, transaction frequency, and flow consistency and produces a simple, explainable trust score.
 
 > **The Problem:** Traditional finance and crypto both track what you have, but not how you behave financially. Trust becomes guesswork.
 > 
-> **FluxID's Solution:** A dynamic Liquidity Identity, that analyze any Stellar wallet address without permission, get a 0-100 trust score with risk level, and understand why through AI-generated insights.
+> **Florax's Solution:** A dynamic Liquidity Identity, that analyze any Stellar wallet address without permission, get a 0-100 trust score with risk level, and understand why through AI-generated insights.
 
 ---
 
@@ -53,44 +53,44 @@ graph TD
 
 ## Stellar Integration
 
-FluxID is built natively on **Stellar** for all blockchain operations.
+Florax is built natively on **Stellar** for all blockchain operations.
 
 ### Horizon API — Transaction Fetching
 
 | Function | What It Does |
 |----------|-------------|
-| [`getPayments()`](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/services/horizon.service.ts#L36) | Fetches wallet payments via Horizon API |
-| [`getAccountTransactions()`](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/services/horizon.service.ts#L85) | Full transaction history |
-| [Swap filtering](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/services/horizon.service.ts#L62) | Excludes self-swaps from inflow/outflow |
+| [`getPayments()`](https://github.com/florax-org/florax/blob/main/backend/src/services/horizon.service.ts#L36) | Fetches wallet payments via Horizon API |
+| [`getAccountTransactions()`](https://github.com/florax-org/florax/blob/main/backend/src/services/horizon.service.ts#L85) | Full transaction history |
+| [Swap filtering](https://github.com/florax-org/florax/blob/main/backend/src/services/horizon.service.ts#L62) | Excludes self-swaps from inflow/outflow |
 
 ### Freighter Wallet — Connection
 
 | Function | What It Does |
 |----------|-------------|
-| [`useFreighter()`](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/context/FreighterContext.tsx#L189) | Wallet connection hook |
-| [`connect()`](https://github.com/StellarVhibes/FluxID/blob/main/frontend/app/context/FreighterContext.tsx#L27) | Connect to Freighter |
-| [Sign payment](https://github.com/StellarVhibes/FluxID/blob/main/frontend/lib/agentDemo.ts#L10) | Agent payment signing |
+| [`useFreighter()`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx#L189) | Wallet connection hook |
+| [`connect()`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx#L27) | Connect to Freighter |
+| [Sign payment](https://github.com/florax-org/florax/blob/main/frontend/lib/agentDemo.ts#L10) | Agent payment signing |
 
 ### Soroban — On-Chain Storage (Optional)
 
 | Contract | What It Does |
 |----------|-------------|
-| [Score storage](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/routes/contract.routes.ts#L35) | Store scores on-chain |
-| [Get score](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/routes/contract.routes.ts#L71) | Read from contract |
+| [Score storage](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts#L35) | Store scores on-chain |
+| [Get score](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts#L71) | Read from contract |
 
 ---
 
 ## AI Integration
 
-FluxID uses **Anthropic Claude** for explainable behavior insights.
+Florax uses **Anthropic Claude** for explainable behavior insights.
 
 ### Claude AI — Behavior Analysis
 
 | Function | What It Does |
 |----------|-------------|
-| [`explainBehavior()`](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/services/explainability/llm.ts#L10) | Claude Haiku integration |
-| [`getExplanation()`](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/services/explainability/index.ts#L8) | Entry point for AI |
-| [Score + AI](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/routes/mcp.routes.ts#L10) | Combined score + AI response |
+| [`explainBehavior()`](https://github.com/florax-org/florax/blob/main/backend/src/services/explainability/llm.ts#L10) | Claude Haiku integration |
+| [`getExplanation()`](https://github.com/florax-org/florax/blob/main/backend/src/services/explainability/index.ts#L8) | Entry point for AI |
+| [Score + AI](https://github.com/florax-org/florax/blob/main/backend/src/routes/mcp.routes.ts#L10) | Combined score + AI response |
 
 **What Claude Analyzes:**
 - Inflow/outflow consistency
@@ -111,24 +111,24 @@ FluxID uses **Anthropic Claude** for explainable behavior insights.
 
 ## Agentic AI — X402 Payments
 
-FluxID enables AI agents to **pay for intelligence** using Stellar.
+Florax enables AI agents to **pay for intelligence** using Stellar.
 
 ### Payment Flow
 
 | Step | What Happens |
 |------|------------|
 | 1. Request | Agent requests `/paid/score/{wallet}` |
-| 2. 402 Response | [`HTTP 402 Payment Required`](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/routes/paid.routes.ts#L184) |
+| 2. 402 Response | [`HTTP 402 Payment Required`](https://github.com/florax-org/florax/blob/main/backend/src/routes/paid.routes.ts#L184) |
 | 3. Payment | Agent pays XLM via Freighter |
-| 4. Verify | [On-chain verification](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/services/payment.service.ts#L92) |
+| 4. Verify | [On-chain verification](https://github.com/florax-org/florax/blob/main/backend/src/services/payment.service.ts#L92) |
 | 5. Score | Return score after payment |
 
 ### Agent Demo
 
 Live demo showing AI agent:
-- [Requesting score](https://github.com/StellarVhibes/FluxID/blob/main/frontend/lib/agentDemo.ts#L69)
-- [Signing payment](https://github.com/StellarVhibes/FluxID/blob/main/frontend/lib/agentDemo.ts#L58)
-- [Polling for result](https://github.com/StellarVhibes/FluxID/blob/main/frontend/lib/agentDemo.ts#L145)
+- [Requesting score](https://github.com/florax-org/florax/blob/main/frontend/lib/agentDemo.ts#L69)
+- [Signing payment](https://github.com/florax-org/florax/blob/main/frontend/lib/agentDemo.ts#L58)
+- [Polling for result](https://github.com/florax-org/florax/blob/main/frontend/lib/agentDemo.ts#L145)
 
 ---
 
@@ -147,7 +147,7 @@ Live demo showing AI agent:
 
 ## Use Cases
 
-FluxID is infrastructure for:
+Florax is infrastructure for:
 
 - **Lending Platforms** — Score = 82 → Approve loan, Score = 34 → Reduce
 - **Freelance Platforms** — Consistent inflow → Reliable user verification
@@ -173,7 +173,7 @@ FluxID is infrastructure for:
 
 ## Level 4 - Green Belt Submission
 
-- **Live demo link:** [https://fluxid.vercel.app/](https://fluxid.vercel.app/)
+- **Live demo link:** [https://florax.vercel.app/](https://florax.vercel.app/)
 - **Deployed contract address:** `CAUICITFNLDMHPXARAXARFBS3JKRGZZP5CE7B4DTLFBCJB5F4U24CKBP` (Liquidity Identity)
 - **Transaction hash of a contract call:** [a00cfdeaadf703ca17b033013974e130e3baab961450fc4a18064230f0d2de3e](https://stellar.expert/explorer/testnet/tx/a00cfdeaadf703ca17b033013974e130e3baab961450fc4a18064230f0d2de3e)
 - **Demo video link:** [Watch Level 4 Demo on Loom](https://www.loom.com/share/01aa11a64fa84e83867c66d1475d11ba)
@@ -184,19 +184,19 @@ Each Level 4 requirement mapped to the exact file, link, or screenshot that sati
 
 | Requirement | Status | Proof |
 |---|---|---|
-| Production-ready MVP | ✅ | Live at [fluxid.vercel.app](https://fluxid.vercel.app/) — full scoring, dashboard, contract, and protocol views |
+| Production-ready MVP | ✅ | Live at [florax.vercel.app](https://florax.vercel.app/) — full scoring, dashboard, contract, and protocol views |
 | Stable frontend + smart contract architecture | ✅ | Separated `frontend/` (Next.js) · `backend/` (Fastify) · `smartcontract/` (Soroban) layers |
-| Mobile responsive UI | ✅ | Desktop rail + `lg:hidden` mobile bottom-nav in [`Sidebar.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/components/Sidebar.tsx); screenshot below |
-| Loading states & error handling | ✅ | [`Skeletons.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/components/Skeletons.tsx) + wallet/error handling in [`FreighterContext.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/context/FreighterContext.tsx) |
-| Monitoring & analytics integration | ✅ | Vercel [`Analytics`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/layout.tsx) + Speed Insights, plus a self-hosted usage panel on the [Admin page](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/admin/page.tsx) fed by [`metrics.service.ts`](https://github.com/bbkenny/FluxID/blob/main/backend/src/services/metrics.service.ts) |
-| Usage / event tracking | ✅ | `logEvent("wallet_connect")` in [`FreighterContext.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/context/FreighterContext.tsx#L104) and `logEvent("score_run")` in [`AnalysisContext.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/context/AnalysisContext.tsx#L78) → `POST /events` |
-| User feedback collection | ✅ | Floating widget [`Feedback.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/components/Feedback.tsx) → `POST /feedback`; summary on the Admin page |
+| Mobile responsive UI | ✅ | Desktop rail + `lg:hidden` mobile bottom-nav in [`Sidebar.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/components/Sidebar.tsx); screenshot below |
+| Loading states & error handling | ✅ | [`Skeletons.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/components/Skeletons.tsx) + wallet/error handling in [`FreighterContext.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx) |
+| Monitoring & analytics integration | ✅ | Vercel [`Analytics`](https://github.com/florax-org/florax/blob/main/frontend/app/layout.tsx) + Speed Insights, plus a self-hosted usage panel on the [Admin page](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/admin/page.tsx) fed by [`metrics.service.ts`](https://github.com/florax-org/florax/blob/main/backend/src/services/metrics.service.ts) |
+| Usage / event tracking | ✅ | `logEvent("wallet_connect")` in [`FreighterContext.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx#L104) and `logEvent("score_run")` in [`AnalysisContext.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/context/AnalysisContext.tsx#L78) → `POST /events` |
+| User feedback collection | ✅ | Floating widget [`Feedback.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/components/Feedback.tsx) → `POST /feedback`; summary on the Admin page |
 | 10+ real user wallet interactions | ✅ | [`Wallet_Interactions_Proof.png`](docs/screenshots/Wallet_Interactions_Proof.png) |
 | Basic user feedback summary | ✅ | [`Feedback_Summary.png`](docs/screenshots/Feedback_Summary.png) |
 | Production deployment | ✅ | Frontend on Vercel; backend on Render (see [`DEPLOYMENT_PERSISTENCE.md`](DEPLOYMENT_PERSISTENCE.md) for durable-storage setup) |
 | Smart contracts on Stellar testnet | ✅ | `CAUICITFNLDMHPXARAXARFBS3JKRGZZP5CE7B4DTLFBCJB5F4U24CKBP` + oracle registry |
-| Minimum 15+ meaningful commits | ✅ | [Commit history](https://github.com/bbkenny/FluxID/commits/main) (210+ commits) |
-| Documentation | ✅ | This README + [`docs/`](https://github.com/bbkenny/FluxID/tree/main/docs) |
+| Minimum 15+ meaningful commits | ✅ | [Commit history](https://github.com/florax-org/florax/commits/main) (210+ commits) |
+| Documentation | ✅ | This README + [`docs/`](https://github.com/florax-org/florax/tree/main/docs) |
 
 ### 📂 Level 4 — Mandatory Code Proofs
 
@@ -506,7 +506,7 @@ export async function readContract(
 - **Monitoring & Analytics Integration:** Mounted Vercel Analytics + Speed Insights, and built a self-hosted usage-tracking layer (`metrics.service.ts`) that records wallet connects and score runs to an append-only JSONL store, surfaced on the Admin page (unique wallets, total events, recent-wallet table).
 - **User Feedback Collection:** Added an app-wide floating feedback widget (1–5 star rating + message) that posts to the backend, with an average-rating and message summary on the Admin page.
 - **Admin Control Surface:** A wallet-gated `/dashboard/admin` page (visible only to the deployer wallet) consolidating usage stats, feedback, on-chain oracle controls, and backend health actions.
-- **Durable Storage Guidance:** Documented the Render persistent-disk + `FLUXID_DATA_DIR` setup so usage/feedback data survives redeploys and cold starts.
+- **Durable Storage Guidance:** Documented the Render persistent-disk + `FLORAX_DATA_DIR` setup so usage/feedback data survives redeploys and cold starts.
 
 ### Level 4 Screenshots
 ![Product UI](docs/screenshots/Product_UI.png)
@@ -520,8 +520,8 @@ export async function readContract(
 
 **Blue Belt = User Growth + Product Iteration + Pitch & Demo.** Level 5 shifts from building to scaling: onboard real testnet users, improve the product from their feedback, and present it for ecosystem exposure.
 
-- **Live demo link:** [https://fluxid.vercel.app/](https://fluxid.vercel.app/)
-- **Public repo:** [https://github.com/bbkenny/FluxID](https://github.com/bbkenny/FluxID)
+- **Live demo link:** [https://florax.vercel.app/](https://florax.vercel.app/)
+- **Public repo:** [https://github.com/florax-org/florax](https://github.com/florax-org/florax)
 - **Pitch deck:** [View Presentation](https://docs.google.com/presentation/d/1RkhWXOQRWWKaiUFeHB_PFUDzVjQmw2m8/edit?usp=sharing&ouid=111174088021239989424&rtpof=true&sd=true)
 - **Demo video:** [Watch Full Walkthrough on Loom](https://www.loom.com/share/ba5e12068bae47b1ac6d504b3f1039d2)
 - **User onboarding form:** [Google Form — collect wallet, email, name, and product feedback](https://forms.gle/kLYwDRdJo8WV1RTE7)
@@ -530,15 +530,15 @@ export async function readContract(
 
 | Requirement | Status | Proof |
 |---|---|---|
-| Public GitHub repository | ✅ | [bbkenny/FluxID](https://github.com/bbkenny/FluxID) — standalone (not a fork), default `main` |
-| Minimum 20+ meaningful commits | ✅ | [Commit history](https://github.com/bbkenny/FluxID/commits/main) (230+ commits) |
-| Live deployed application | ✅ | [fluxid.vercel.app](https://fluxid.vercel.app/) — scoring, dashboard, contract, protocol views |
+| Public GitHub repository | ✅ | [bbkenny/Florax](https://github.com/florax-org/florax) — standalone (not a fork), default `main` |
+| Minimum 20+ meaningful commits | ✅ | [Commit history](https://github.com/florax-org/florax/commits/main) (230+ commits) |
+| Live deployed application | ✅ | [florax.vercel.app](https://florax.vercel.app/) — scoring, dashboard, contract, protocol views |
 | 50+ testnet users onboarded | ⏳ | Usage panel + onboarding form — see proof below |
-| Real transaction activity | ✅ | Wallet connects, score runs, and X402 demo payments recorded by [`metrics.service.ts`](https://github.com/bbkenny/FluxID/blob/main/backend/src/services/metrics.service.ts) |
+| Real transaction activity | ✅ | Wallet connects, score runs, and X402 demo payments recorded by [`metrics.service.ts`](https://github.com/florax-org/florax/blob/main/backend/src/services/metrics.service.ts) |
 | Active usage proof | ⏳ | Analytics screenshot below (usage panel + event log) |
 | New features from user feedback | ✅ | Mobile UX fixes, onboarding improvements, feedback widget — see iteration log below |
 | Improved UX/UI and stability | ✅ | Mobile-responsive refactors + stability fixes in commit history |
-| Optimized onboarding experience | ✅ | [`Onboarding.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/components/Onboarding.tsx) step flow |
+| Optimized onboarding experience | ✅ | [`Onboarding.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/components/Onboarding.tsx) step flow |
 | Professional pitch deck | ✅ | [Slides](https://docs.google.com/presentation/d/1RkhWXOQRWWKaiUFeHB_PFUDzVjQmw2m8/edit?usp=sharing&ouid=111174088021239989424&rtpof=true&sd=true) — problem, solution, market, architecture, growth, roadmap |
 | Full product walkthrough demo | ✅ | [Loom video](https://www.loom.com/share/ba5e12068bae47b1ac6d504b3f1039d2) |
 | Google Form + exported Excel in README | ⏳ | Form link above; exported responses Excel attached below |
@@ -548,7 +548,7 @@ export async function readContract(
 
 ![Active Usage & User Onboarding](docs/screenshots/Analytics_n_Monitoring.png)
 
-**Usage panel metrics (live on the [Admin page](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/admin/page.tsx)):**
+**Usage panel metrics (live on the [Admin page](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/admin/page.tsx)):**
 - Unique wallets onboarded: **_[FILL: current count from admin panel]_**
 - Wallet connects: **_[FILL]_**
 - Score runs: **_[FILL]_**
@@ -564,21 +564,21 @@ Feedback collected through the in-app widget and the onboarding form drives the 
 
 | Feedback round | What users said | Change shipped | Commit |
 |---|---|---|---|
-| Round 1 | Wallet input delete bounce-back; analyze bar toggle | Tightened analyze bar + input behavior | [`1bdccf6`](https://github.com/bbkenny/FluxID/commit/1bdccf6) |
-| Round 2 | Settings toggles overlapping on mobile | Fixed notification toggle layout | [`4410536`](https://github.com/bbkenny/FluxID/commit/4410536) |
-| Round 3 | Transactions hard to read on mobile | Mobile filter icons + stacked cards | [`312a8ac`](https://github.com/bbkenny/FluxID/commit/312a8ac) |
-| Round 4 | On-chain saves failing on mainnet | Graceful on-chain save degradation + config docs | [`94d2e86`](https://github.com/bbkenny/FluxID/commit/94d2e86) |
+| Round 1 | Wallet input delete bounce-back; analyze bar toggle | Tightened analyze bar + input behavior | [`1bdccf6`](https://github.com/florax-org/florax/commit/1bdccf6) |
+| Round 2 | Settings toggles overlapping on mobile | Fixed notification toggle layout | [`4410536`](https://github.com/florax-org/florax/commit/4410536) |
+| Round 3 | Transactions hard to read on mobile | Mobile filter icons + stacked cards | [`312a8ac`](https://github.com/florax-org/florax/commit/312a8ac) |
+| Round 4 | On-chain saves failing on mainnet | Graceful on-chain save degradation + config docs | [`94d2e86`](https://github.com/florax-org/florax/commit/94d2e86) |
 | _Next_ | _[FILL: newest feedback from form]_ | _[FILL: change + commit]_ | _[FILL: commit link]_ |
 
 > **Improvement plan for the next phase (based on collected feedback):**
 > _[FILL: 3–5 concrete improvements you'll ship next, each tied to the feedback above — e.g. "Cohort segmentation UI so users can compare wallets" → issue/commit link.]_
-> See the GitHub Issues for the working backlog: [FluxID issues](https://github.com/bbkenny/FluxID/issues).
+> See the GitHub Issues for the working backlog: [Florax issues](https://github.com/florax-org/florax/issues).
 
 ---
 
 ## Level 3 - Orange Belt Submission
 
-- **Live demo link:** [https://fluxid.vercel.app/](https://fluxid.vercel.app/)
+- **Live demo link:** [https://florax.vercel.app/](https://florax.vercel.app/)
 - **Deployed contract address:** `CAUICITFNLDMHPXARAXARFBS3JKRGZZP5CE7B4DTLFBCJB5F4U24CKBP` (Liquidity Identity)
 - **Transaction hash of a contract call:** [a00cfdeaadf703ca17b033013974e130e3baab961450fc4a18064230f0d2de3e](https://stellar.expert/explorer/testnet/tx/a00cfdeaadf703ca17b033013974e130e3baab961450fc4a18064230f0d2de3e)
 - **Demo video link:** [Watch Demo on Loom](https://www.loom.com/share/ba5e12068bae47b1ac6d504b3f1039d2)
@@ -589,21 +589,21 @@ Each Level 3 requirement mapped to the exact file, link, or screenshot that sati
 
 | Requirement | Status | Proof |
 |---|---|---|
-| Advanced smart contract development | ✅ | [`liquidity_identity/src/lib.rs`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs) — auth, input-hash verification, events, verifiable records |
-| Inter-contract communication | ✅ | `LiquidityIdentity.set_score` calls [`OracleRegistry.is_oracle_authorized`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/oracle_registry/src/lib.rs) via `env.invoke_contract` ([lib.rs L85](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs#L85)) |
-| Event streaming & real-time updates | ✅ | `env.events().publish("score_set", …)` on every score write ([lib.rs L117](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs#L117)) |
-| CI/CD pipeline setup | ✅ | [`.github/workflows/ci.yml`](https://github.com/bbkenny/FluxID/blob/main/.github/workflows/ci.yml) — builds contracts, runs contract + frontend tests, builds frontend. Screenshot below |
-| Smart contract deployment workflow | ✅ | [`deploy.sh`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/deploy.sh) + [`Makefile`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/Makefile) |
+| Advanced smart contract development | ✅ | [`liquidity_identity/src/lib.rs`](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs) — auth, input-hash verification, events, verifiable records |
+| Inter-contract communication | ✅ | `LiquidityIdentity.set_score` calls [`OracleRegistry.is_oracle_authorized`](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/oracle_registry/src/lib.rs) via `env.invoke_contract` ([lib.rs L85](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs#L85)) |
+| Event streaming & real-time updates | ✅ | `env.events().publish("score_set", …)` on every score write ([lib.rs L117](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs#L117)) |
+| CI/CD pipeline setup | ✅ | [`.github/workflows/ci.yml`](https://github.com/florax-org/florax/blob/main/.github/workflows/ci.yml) — builds contracts, runs contract + frontend tests, builds frontend. Screenshot below |
+| Smart contract deployment workflow | ✅ | [`deploy.sh`](https://github.com/florax-org/florax/blob/main/smartcontract/deploy.sh) + [`Makefile`](https://github.com/florax-org/florax/blob/main/smartcontract/Makefile) |
 | Mobile responsive frontend | ✅ | Responsive layout across dashboard — screenshot below |
-| Error handling & loading states | ✅ | Skeletons in [`Skeletons.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/components/Skeletons.tsx); wallet error handling in [`FreighterContext.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/context/FreighterContext.tsx) |
-| Tests for contracts and frontend | ✅ | **Contracts:** 19 tests (12 in [`liquidity_identity/src/test.rs`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/liquidity_identity/src/test.rs) + 7 in [`oracle_registry/src/test.rs`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/oracle_registry/src/test.rs)). **Frontend:** [`lib/scoring.test.ts`](https://github.com/bbkenny/FluxID/blob/main/frontend/lib/scoring.test.ts) (vitest) |
+| Error handling & loading states | ✅ | Skeletons in [`Skeletons.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/components/Skeletons.tsx); wallet error handling in [`FreighterContext.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx) |
+| Tests for contracts and frontend | ✅ | **Contracts:** 19 tests (12 in [`liquidity_identity/src/test.rs`](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/liquidity_identity/src/test.rs) + 7 in [`oracle_registry/src/test.rs`](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/oracle_registry/src/test.rs)). **Frontend:** [`lib/scoring.test.ts`](https://github.com/florax-org/florax/blob/main/frontend/lib/scoring.test.ts) (vitest) |
 | Production-ready architecture | ✅ | Separated frontend / backend / smart-contract layers; see [Repository Structure](#-repository-structure-where-each-mandatory-file-lives) |
 | Documentation & demo | ✅ | This README + [Loom demo video](https://www.loom.com/share/ba5e12068bae47b1ac6d504b3f1039d2) |
-| Minimum 10+ meaningful commits | ✅ | [Commit history](https://github.com/bbkenny/FluxID/commits/main) (190+ commits) |
+| Minimum 10+ meaningful commits | ✅ | [Commit history](https://github.com/florax-org/florax/commits/main) (190+ commits) |
 
 ### 📂 Frontend Source Files
 
-All frontend source files live inside [`frontend/`](https://github.com/bbkenny/FluxID/tree/main/frontend). Here is the complete source-file tree:
+All frontend source files live inside [`frontend/`](https://github.com/florax-org/florax/tree/main/frontend). Here is the complete source-file tree:
 
 ```
 frontend/
@@ -667,7 +667,7 @@ frontend/
 
 ### 🔌 Frontend — Wallet Connection (from `FreighterContext.tsx`)
 
-Full file: [`frontend/app/context/FreighterContext.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/context/FreighterContext.tsx)
+Full file: [`frontend/app/context/FreighterContext.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx)
 
 Multi-wallet initialization with Freighter, Albedo, and xBull:
 
@@ -725,7 +725,7 @@ const connect = useCallback(async () => {
 
 ### 🔗 Frontend — Smart Contract Integration (from `contractRead.ts` and `contract/page.tsx`)
 
-#### Read-only contract helper: [`frontend/lib/contractRead.ts`](https://github.com/bbkenny/FluxID/blob/main/frontend/lib/contractRead.ts)
+#### Read-only contract helper: [`frontend/lib/contractRead.ts`](https://github.com/florax-org/florax/blob/main/frontend/lib/contractRead.ts)
 
 ```tsx
 import * as StellarSdk from "@stellar/stellar-sdk";
@@ -758,7 +758,7 @@ export async function readContract(
 }
 ```
 
-#### Contract read/write UI: [`frontend/app/dashboard/contract/page.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/contract/page.tsx)
+#### Contract read/write UI: [`frontend/app/dashboard/contract/page.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/contract/page.tsx)
 
 Reading the contract (`get_wallet_info`) from the frontend:
 
@@ -817,7 +817,7 @@ const handleWrite = async () => {
 };
 ```
 
-#### Stellar config: [`frontend/lib/constants.ts`](https://github.com/bbkenny/FluxID/blob/main/frontend/lib/constants.ts)
+#### Stellar config: [`frontend/lib/constants.ts`](https://github.com/florax-org/florax/blob/main/frontend/lib/constants.ts)
 
 ```tsx
 export const STELLAR_CONFIG = {
@@ -831,12 +831,12 @@ export const STELLAR_CONFIG = {
 
 | Smart Contract Function (Soroban) | Frontend File | Frontend Function | How It's Called |
 |---|---|---|---|
-| `set_score(caller, wallet, score, risk, hash)` | [`contract/page.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/contract/page.tsx#L66) | `handleWrite()` | Builds a Soroban TX calling `contract.call("set_score", ...)`, signs via `kit.signTransaction()`, submits via `server.sendTransaction()` |
-| `get_wallet_info(wallet)` | [`contract/page.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/contract/page.tsx#L31) | `handleRead()` | Calls `readContract(contractId, "get_wallet_info", ...)` which simulates the TX via Soroban RPC |
-| `get_score(wallet)` | [`lib/contractRead.ts`](https://github.com/bbkenny/FluxID/blob/main/frontend/lib/contractRead.ts) | `readContract()` | Generic read helper used across the app to simulate contract calls |
-| `is_oracle_authorized(oracle)` | [`smartcontract/contracts/liquidity_identity/src/lib.rs`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs#L85) | Cross-contract call | Called automatically by `set_score` via `env.invoke_contract` to the OracleRegistry |
-| Wallet connect | [`FreighterContext.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/context/FreighterContext.tsx#L88) | `connect()` | `StellarWalletsKit.authModal()` — supports Freighter, Albedo, xBull |
-| Transaction signing | [`contract/page.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/contract/page.tsx#L102) | `kit.signTransaction()` | Signs prepared Soroban TX via StellarWalletsKit |
+| `set_score(caller, wallet, score, risk, hash)` | [`contract/page.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/contract/page.tsx#L66) | `handleWrite()` | Builds a Soroban TX calling `contract.call("set_score", ...)`, signs via `kit.signTransaction()`, submits via `server.sendTransaction()` |
+| `get_wallet_info(wallet)` | [`contract/page.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/contract/page.tsx#L31) | `handleRead()` | Calls `readContract(contractId, "get_wallet_info", ...)` which simulates the TX via Soroban RPC |
+| `get_score(wallet)` | [`lib/contractRead.ts`](https://github.com/florax-org/florax/blob/main/frontend/lib/contractRead.ts) | `readContract()` | Generic read helper used across the app to simulate contract calls |
+| `is_oracle_authorized(oracle)` | [`smartcontract/contracts/liquidity_identity/src/lib.rs`](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs#L85) | Cross-contract call | Called automatically by `set_score` via `env.invoke_contract` to the OracleRegistry |
+| Wallet connect | [`FreighterContext.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx#L88) | `connect()` | `StellarWalletsKit.authModal()` — supports Freighter, Albedo, xBull |
+| Transaction signing | [`contract/page.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/contract/page.tsx#L102) | `kit.signTransaction()` | Signs prepared Soroban TX via StellarWalletsKit |
 
 ### Added Features for Level 3
 - **Advanced Smart Contracts & Inter-contract Communication:** Built and integrated the `OracleRegistry` contract, and programmed the `LiquidityIdentity` contract to dynamically communicate with it to verify authorized score providers.
@@ -865,18 +865,18 @@ Everything a reviewer needs to verify Level 2 is collected here so nothing has t
 |---|---|---|
 | Contract deployed on testnet | ✅ | Contract ID `CAUICITFNLDMHPXARAXARFBS3JKRGZZP5CE7B4DTLFBCJB5F4U24CKBP` — [view on stellar.expert](https://stellar.expert/explorer/testnet/contract/CAUICITFNLDMHPXARAXARFBS3JKRGZZP5CE7B4DTLFBCJB5F4U24CKBP) |
 | Transaction hash of a contract call | ✅ | [`a00cfdea…de3e`](https://stellar.expert/explorer/testnet/tx/a00cfdeaadf703ca17b033013974e130e3baab961450fc4a18064230f0d2de3e) and [`b58a679b…91c7`](https://stellar.expert/explorer/testnet/tx/b58a679bf231a0f74c41fe4d67e115736773170766106adee4a11eab820591c7) |
-| Contract called from the frontend | ✅ | [`frontend/app/dashboard/contract/page.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/contract/page.tsx) reads/writes the Soroban contract via RPC |
-| Multi-wallet connect (Freighter / Albedo / xBull) | ✅ | [`frontend/app/context/FreighterContext.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/context/FreighterContext.tsx) — see snippet below |
+| Contract called from the frontend | ✅ | [`frontend/app/dashboard/contract/page.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/contract/page.tsx) reads/writes the Soroban contract via RPC |
+| Multi-wallet connect (Freighter / Albedo / xBull) | ✅ | [`frontend/app/context/FreighterContext.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx) — see snippet below |
 | 3+ error types handled | ✅ | User rejection, wallet not installed, and signing/insufficient-balance failures — see wallet snippet below |
-| Transaction status visible | ✅ | Pending → success/fail states in [`frontend/app/dashboard/transfer/page.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/transfer/page.tsx) |
-| Minimum 2+ meaningful commits | ✅ | See the repo [commit history](https://github.com/bbkenny/FluxID/commits/main) (190+ commits) |
+| Transaction status visible | ✅ | Pending → success/fail states in [`frontend/app/dashboard/transfer/page.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/transfer/page.tsx) |
+| Minimum 2+ meaningful commits | ✅ | See the repo [commit history](https://github.com/florax-org/florax/commits/main) (190+ commits) |
 
 ### 📂 Repository Structure (where each mandatory file lives)
 
 The Soroban contract lives under a `contracts/` folder, nested inside `smartcontract/`:
 
 ```
-FluxID/
+Florax/
 ├── smartcontract/
 │   └── contracts/
 │       ├── liquidity_identity/
@@ -893,12 +893,12 @@ FluxID/
 └── backend/                    ← Node.js API (scoring, Horizon, payments)
 ```
 
-- **Contract source:** [`smartcontract/contracts/liquidity_identity/src/lib.rs`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs)
-- **Contract tests:** [`smartcontract/contracts/liquidity_identity/src/test.rs`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/liquidity_identity/src/test.rs)
+- **Contract source:** [`smartcontract/contracts/liquidity_identity/src/lib.rs`](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs)
+- **Contract tests:** [`smartcontract/contracts/liquidity_identity/src/test.rs`](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/liquidity_identity/src/test.rs)
 
 ### 🦀 Smart Contract — core function (from `lib.rs`)
 
-Full file: [`smartcontract/contracts/liquidity_identity/src/lib.rs`](https://github.com/bbkenny/FluxID/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs)
+Full file: [`smartcontract/contracts/liquidity_identity/src/lib.rs`](https://github.com/florax-org/florax/blob/main/smartcontract/contracts/liquidity_identity/src/lib.rs)
 
 ```rust
 pub fn set_score(
@@ -945,7 +945,7 @@ pub fn set_score(
 
 ### 🔌 Frontend — multi-wallet connect + error handling (from `FreighterContext.tsx`)
 
-Full file: [`frontend/app/context/FreighterContext.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/context/FreighterContext.tsx)
+Full file: [`frontend/app/context/FreighterContext.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/context/FreighterContext.tsx)
 
 ```tsx
 // Multi-wallet init via StellarWalletsKit (Freighter, Albedo, xBull)
@@ -977,14 +977,14 @@ const connect = useCallback(async () => {
 ```
 
 Transactions are signed via `kit.signTransaction(...)` in
-[`transfer/page.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/transfer/page.tsx)
-and [`contract/page.tsx`](https://github.com/bbkenny/FluxID/blob/main/frontend/app/dashboard/contract/page.tsx),
+[`transfer/page.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/transfer/page.tsx)
+and [`contract/page.tsx`](https://github.com/florax-org/florax/blob/main/frontend/app/dashboard/contract/page.tsx),
 with pending/success/fail status shown in the UI.
 
 ---
 ## Level 2 - Yellow Belt Submission
 
-- **Live demo link:** [https://fluxid.vercel.app/](https://fluxid.vercel.app/)
+- **Live demo link:** [https://florax.vercel.app/](https://florax.vercel.app/)
 - **Deployed contract address:** `CAUICITFNLDMHPXARAXARFBS3JKRGZZP5CE7B4DTLFBCJB5F4U24CKBP`
 - **Transaction hash of a contract call:** [b58a679bf231a0f74c41fe4d67e115736773170766106adee4a11eab820591c7](https://stellar.expert/explorer/testnet/tx/b58a679bf231a0f74c41fe4d67e115736773170766106adee4a11eab820591c7)
 
@@ -1029,7 +1029,7 @@ cd backend && npm install && npm run dev
 ## Project Structure
 
 ```
-FluxID/
+Florax/
 ├── frontend/           # Next.js PWA
 ├── backend/           # Node.js scoring
 ├── smartcontract/    # Soroban contracts
@@ -1040,15 +1040,15 @@ FluxID/
 
 ## Key Links
 
-- [Frontend](https://github.com/StellarVhibes/FluxID/tree/main/frontend)
-- [Backend](https://github.com/StellarVhibes/FluxID/tree/main/backend)
-- [Smart Contracts](https://github.com/StellarVhibes/FluxID/tree/main/smartcontract)
+- [Frontend](https://github.com/florax-org/florax/tree/main/frontend)
+- [Backend](https://github.com/florax-org/florax/tree/main/backend)
+- [Smart Contracts](https://github.com/florax-org/florax/tree/main/smartcontract)
 
 ---
 
 ## Project Strategy & Phases
 
-FluxID is being executed in three distinct phases. We keep our word and deliver in stages.
+Florax is being executed in three distinct phases. We keep our word and deliver in stages.
 
 - ✅ **Phase 1: MVP (Single Wallet Scoring) — COMPLETED**
   We have successfully built the core scoring engine, live dashboard, and AI explainability. The foundation is set.
@@ -1069,7 +1069,7 @@ FluxID is being executed in three distinct phases. We keep our word and deliver 
 
 ## Post-MVP Roadmap (Phase 2 Building)
 
-After Phase 1 (MVP), FluxID evolves from scoring one wallet to understanding entire user bases.
+After Phase 1 (MVP), Florax evolves from scoring one wallet to understanding entire user bases.
 
 > **Protocol Intelligence Layer** — A system for analyzing groups of wallets using trust scores.
 
@@ -1081,7 +1081,7 @@ After Phase 1 (MVP), FluxID evolves from scoring one wallet to understanding ent
 4. **Early Warning System** — Detect sudden changes in risk (e.g., "12% dropped below 50 in 24h")
 
 ### Scalable Protocol Sync Engine (Advanced)”
-To support real-world protocol integrations, FluxID will introduce a background synchronization system that enables full user-base analysis.
+To support real-world protocol integrations, Florax will introduce a background synchronization system that enables full user-base analysis.
 
 ---
 
@@ -1095,10 +1095,10 @@ A real-time, behavior-based trust layer for financial systems.
 
 ## Live Demo
 
-- 🌐 **Live App:** [https://fluxid.vercel.app/](https://fluxid.vercel.app/)
+- 🌐 **Live App:** [https://florax.vercel.app/](https://florax.vercel.app/)
 - 📊 **Pitch Deck:** [View Presentation](https://docs.google.com/presentation/d/1RkhWXOQRWWKaiUFeHB_PFUDzVjQmw2m8/edit?usp=sharing&ouid=111174088021239989424&rtpof=true&sd=true)
 - ▶️ **Demo Video:** [View Demo Video](https://www.loom.com/share/ba5e12068bae47b1ac6d504b3f1039d2)
-- 🐦 **Social Media:** [https://x.com/useFluxID](https://x.com/useFluxID)
+
 
 ---
 

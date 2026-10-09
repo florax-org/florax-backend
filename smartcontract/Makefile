@@ -18,7 +18,7 @@ deploy-testnet:
 	@echo "Deploying to Testnet..."
 	/tmp/stellar contract deploy \
 		--wasm target/wasm32v1-none/release/liquidity_identity.wasm \
-		--source fluxid-admin \
+		--source florax-admin \
 		--network testnet \
 		--rpc-url "https://soroban-testnet.stellar.org" \
 		--network-passphrase "Test SDF Network ; September 2015"
@@ -28,7 +28,7 @@ deploy-mainnet:
 	@echo "Deploying to Mainnet..."
 	/tmp/stellar contract deploy \
 		--wasm target/wasm32v1-none/release/liquidity_identity.wasm \
-		--source fluxid-admin \
+		--source florax-admin \
 		--network mainnet \
 		--rpc-url "https://soroban-rpc.mainnet.stellar.org" \
 		--network-passphrase "Public Global Stellar Network ; September 2015"
@@ -37,7 +37,7 @@ deploy-mainnet:
 init-testnet:
 	/tmp/stellar contract invoke \
 		--id CONTRACT_ID \
-		--source fluxid-admin \
+		--source florax-admin \
 		--network testnet \
 		--rpc-url "https://soroban-testnet.stellar.org" \
 		--network-passphrase "Test SDF Network ; September 2015" \
@@ -49,7 +49,7 @@ init-testnet:
 init-mainnet:
 	/tmp/stellar contract invoke \
 		--id CONTRACT_ID \
-		--source fluxid-admin \
+		--source florax-admin \
 		--network mainnet \
 		--rpc-url "https://rpc.lightsail.network/" \
 		--network-passphrase "Public Global Stellar Network ; September 2015" \

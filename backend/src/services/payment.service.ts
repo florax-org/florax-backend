@@ -16,7 +16,7 @@ const PERSIST_PATH = join(process.cwd(), '.payment-requests.json');
 function resolveReceiveAddress(): string {
   if (appConfig.payment.receiveAddress) return appConfig.payment.receiveAddress;
   const adminSecretRaw =
-    process.env.ORACLE_SECRET_KEY || process.env.ADMIN_SECRET_KEY || process.env.FLUXID_ADMIN_SECRET_KEY;
+    process.env.ORACLE_SECRET_KEY || process.env.ADMIN_SECRET_KEY || process.env.FLORAX_ADMIN_SECRET_KEY;
   if (adminSecretRaw) {
     const adminSecret = adminSecretRaw.trim().replace(/['"]/g, '');
     try {
@@ -37,7 +37,7 @@ function resolveReceiveAddress(): string {
  * a memo across different wallets (Fix 3).
  */
 function deriveRequestId(accountId: string, rawNonce: string): string {
-  const secret = process.env.PAYMENT_HMAC_SECRET || 'fluxid-default-hmac-secret';
+  const secret = process.env.PAYMENT_HMAC_SECRET || 'florax-default-hmac-secret';
   return createHmac('sha256', secret)
     .update(`${accountId}:${rawNonce}`)
     .digest('hex')

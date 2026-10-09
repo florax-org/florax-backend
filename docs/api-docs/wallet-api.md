@@ -1,4 +1,4 @@
-# FluxID Wallet Intelligence API
+# Florax Wallet Intelligence API
 
 Turn any Stellar wallet into a real-time financial identity. Use these endpoints to assess individual wallet reliability, fetch historical behavior, or verify scores on-chain.
 
@@ -58,7 +58,7 @@ Retrieves the historical score progression for a specific wallet.
 ## 3. On-Chain Sync
 `POST /wallet/:accountId/sync`
 
-Publishes the current liquidity score to the FluxID Soroban contract. Useful for DeFi protocols that require on-chain verification.
+Publishes the current liquidity score to the Florax Soroban contract. Useful for DeFi protocols that require on-chain verification.
 
 ### Body
 ```json
@@ -83,4 +83,4 @@ Designed for AI agents. Returns an `HTTP 402 Payment Required` challenge. Once t
 
 ## Developer Tools (MCP)
 
-FluxID supports the **Model Context Protocol (MCP)**. If you are integrating with an LLM (like Claude), you can expose the `analyze_wallet` tool to let the AI perform financial due diligence on-chain.
+Florax supports the **Model Context Protocol (MCP)**. If you are integrating with an LLM (like Claude), you can expose the `analyze_wallet` tool to let the AI perform financial due diligence on-chain.

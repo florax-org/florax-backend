@@ -11,7 +11,7 @@ export interface ScoreHistoryEntry {
   timestamp: number;
 }
 
-const DATA_DIR = process.env.FLUXID_DATA_DIR || path.join(process.cwd(), 'data');
+const DATA_DIR = process.env.FLORAX_DATA_DIR || path.join(process.cwd(), 'data');
 const WALLET_HISTORY_FILE = path.join(DATA_DIR, 'wallet_history.jsonl');
 const PROTOCOL_HISTORY_FILE = path.join(DATA_DIR, 'protocol_history.jsonl');
 const LEGACY_HISTORY_FILE = path.join(DATA_DIR, 'score_history.jsonl');

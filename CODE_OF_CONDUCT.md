@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-We pledge to make participation in the **FluxID Protocol** project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We pledge to make participation in the **Florax Protocol** project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 We are committed to building the **liquidity intelligence layer on Stellar** — turning any wallet into a real-time, explainable financial identity so that trust is based on behavior, not guesswork.
 
@@ -28,4 +28,4 @@ This Code of Conduct is adapted from the [Contributor Covenant][homepage], versi
 
 ---
 
-_FluxID — Liquidity Identity Layer on Stellar_
+_Florax — Liquidity Identity Layer on Stellar_

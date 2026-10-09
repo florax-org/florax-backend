@@ -9,14 +9,14 @@ vi.stubGlobal('process', { ...process, exit: vi.fn() as never });
 let tmpDir: string;
 
 beforeEach(async () => {
-  tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'fluxid-routes-test-'));
-  process.env.FLUXID_DATA_DIR = tmpDir;
+  tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'florax-routes-test-'));
+  process.env.FLORAX_DATA_DIR = tmpDir;
   vi.resetModules();
 });
 
 afterEach(async () => {
   await fs.rm(tmpDir, { recursive: true, force: true });
-  delete process.env.FLUXID_DATA_DIR;
+  delete process.env.FLORAX_DATA_DIR;
   vi.restoreAllMocks();
 });
 

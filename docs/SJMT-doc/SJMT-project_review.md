@@ -1,4 +1,4 @@
-# 🔍 Critical Review: AgriT & FluxID vs. Stellar Journey Belt Program
+# 🔍 Critical Review: AgriT & Florax vs. Stellar Journey Belt Program
 
 > Last updated: 2026-07-17 — All identified issues resolved.
 
@@ -6,40 +6,40 @@
 
 ## 🎯 The Right Strategy
 
-### FluxID = Main Project (Builder Track)
+### Florax = Main Project (Builder Track)
 
 It's already built, live, and close to Blue Belt. This is your horse — ride it. Focus 90% of energy here: screenshots → submit Levels 1–3 → prove users → Level 4 → Level 5 → Mainnet → Black Belt. That's the prize pool path.
 
 ### AgriT = The Vertical (Startup Track)
 
-AgriT isn't just a separate project. It's actually **FluxID's first real-world customer.** Think about it:
+AgriT isn't just a separate project. It's actually **Florax's first real-world customer.** Think about it:
 
 ```
 AgriT needs:  "credit score for a farmer wallet"
-FluxID does:  "credit score for any Stellar wallet"
+Florax does:  "credit score for any Stellar wallet"
 
-AgriT calls FluxID's API → gets score → mints VYC based on that score
+AgriT calls Florax's API → gets score → mints VYC based on that score
 ```
 
-The VYC contract already has a `score: u32` field that's designed to receive FluxID's output. The integration is basically already there in the contract design.
+The VYC contract already has a `score: u32` field that's designed to receive Florax's output. The integration is basically already there in the contract design.
 
 ### Why Keep Them Separate Repos (For Now)
 
-- Different tracks — Builder Track (FluxID) vs Startup Track (AgriT)
+- Different tracks — Builder Track (Florax) vs Startup Track (AgriT)
 - The program says you can't be in both tracks the same month
 - Keeping them separate lets you pitch the relationship as "ecosystem infrastructure + vertical application" — a stronger story for SCF grants later
-- When ready, AgriT simply calls FluxID's API — no code merge needed, just an API call
+- When ready, AgriT simply calls Florax's API — no code merge needed, just an API call
 
 ### The Roadmap
 
 ```
-July     → Submit FluxID for Levels 1–3 (screenshots are the only blocker)
+July     → Submit Florax for Levels 1–3 (screenshots are the only blocker)
 July     → Submit AgriT Idea Submission (Orange Belt — just an idea form)
 
-August   → FluxID: prove 10+ users → Level 4 (Green Belt)
+August   → Florax: prove 10+ users → Level 4 (Green Belt)
 August   → AgriT: build basic frontend → submit as Startup Track entry
 
-Later    → AgriT integrates FluxID scoring via API → combined SCF pitch
+Later    → AgriT integrates Florax scoring via API → combined SCF pitch
 ```
 
 > **The one thing blocking you right now is screenshots.** Everything else is built.
@@ -48,7 +48,7 @@ Later    → AgriT integrates FluxID scoring via API → combined SCF pitch
 
 ## 📸 Screenshots Needed — Guide
 
-**Use TESTNET screenshots** for all Level 1–3 submissions. The program explicitly says "testnet" for Levels 1–4. The live app at `fluxid.vercel.app` already runs on testnet by default — so just use it as-is.
+**Use TESTNET screenshots** for all Level 1–3 submissions. The program explicitly says "testnet" for Levels 1–4. The live app at `florax.vercel.app` already runs on testnet by default — so just use it as-is.
 
 ### The 4 screenshots you need to take:
 
@@ -61,7 +61,7 @@ Later    → AgriT integrates FluxID scoring via API → combined SCF pitch
 
 ### Where to put them in the README:
 
-Add a `## 📸 Screenshots` section to `FluxID/README.md` like this:
+Add a `## 📸 Screenshots` section to `Florax/README.md` like this:
 
 ```markdown
 ## 📸 Screenshots
@@ -79,7 +79,7 @@ Add a `## 📸 Screenshots` section to `FluxID/README.md` like this:
 ![Transaction Result](./docs/screenshots/transaction-result.png)
 ```
 
-Save the images to: `FluxID/docs/screenshots/` (create the folder).
+Save the images to: `Florax/docs/screenshots/` (create the folder).
 
 ---
 
@@ -110,7 +110,7 @@ Today we changed `set_score()` to require a 5th argument (`score_input_hash: Byt
 
 **To redeploy testnet contract:**
 ```bash
-cd FluxID/smartcontract
+cd Florax/smartcontract
 make build
 make deploy-testnet
 # Copy the new contract ID → paste into backend/.env as TESTNET_CONTRACT_ID
@@ -123,12 +123,12 @@ make init-testnet
 
 | Project | Current State | Belt Readiness | Status |
 |---------|--------------|----------------|--------|
-| **FluxID** | ✅ Production-grade, live, Phase 2 done + all 5 bugs fixed | 🔵 Blue Belt → ⚫ Black Belt path clear | All fixes merged |
+| **Florax** | ✅ Production-grade, live, Phase 2 done + all 5 bugs fixed | 🔵 Blue Belt → ⚫ Black Belt path clear | All fixes merged |
 | **AgriT** | ✅ VYC smart contract live + 9 tests | 🟠 Orange Belt (contract + tests done) | VYC contract built |
 
 ---
 
-## 🔵 FluxID — What Was Fixed
+## 🔵 Florax — What Was Fixed
 
 ### ✅ Fix 1: Contract Centralization → Trustless Verification
 
@@ -239,7 +239,7 @@ The `volatility_shield` contract was completely replaced with a production-ready
 pub struct VycRecord {
     pub id: u64,
     pub farmer: Address,
-    pub score: u32,           // FluxID credit score at mint time (0-100)
+    pub score: u32,           // Florax credit score at mint time (0-100)
     pub expected_yield: i128, // micro-USDC (6 decimal places)
     pub crop: Symbol,         // "MAIZE", "COCOA", "SOYBEAN"
     pub region: Symbol,       // ISO 3166-2: "NGLA", "GHAA"
@@ -274,14 +274,14 @@ pub struct VycRecord {
 
 ## 🎯 Belt Status (Updated)
 
-### FluxID
+### Florax
 
 | Belt | Requirement | Status |
 |------|------------|--------|
 | ⚪ White | Wallet + contracts + transactions | ✅ |
 | 🟡 Yellow | Multi-wallet, events, write contract | ✅ |
 | 🟠 Orange | Complete mini dApp + tests + advanced contracts | ✅ |
-| 🟢 Green | Production MVP + 10 testnet users | ✅ Live at fluxid.vercel.app |
+| 🟢 Green | Production MVP + 10 testnet users | ✅ Live at florax.vercel.app |
 | 🔵 Blue | 50 users + features from feedback + Pitch + Demo | ✅ (prove 50 users) |
 | ⚫ Black | Mainnet + Audit + 10 Mainnet users | 🔜 Deploy to mainnet next |
 
@@ -297,7 +297,7 @@ pub struct VycRecord {
 
 ## Next Steps
 
-### FluxID
+### Florax
 - [ ] Deploy `LiquidityIdentity` contract to **Mainnet** with the new `score_input_hash` field
 - [ ] Track and document **50+ real user interactions** (add analytics/logging)
 - [ ] Commission a self-audit document covering the 5 fixes above
@@ -309,4 +309,4 @@ pub struct VycRecord {
 - [ ] Wire the backend to call `mint_vyc` after proof-of-activity verification
 
 ### The Synergy Story
-FluxID's scoring engine provides the `score` field that feeds directly into AgriT's `mint_vyc()`. These two are infrastructure + application layers of the same trust stack — a strong combined pitch for the Stellar Startup Track.
+Florax's scoring engine provides the `score` field that feeds directly into AgriT's `mint_vyc()`. These two are infrastructure + application layers of the same trust stack — a strong combined pitch for the Stellar Startup Track.

@@ -8,14 +8,14 @@ const SAMPLE = 'GAVA7FY3KBXJVZDBX254LPM53YXRUEVLM5BXMXZOC7ZIW3HXFP6LT4SR';
 let tmpDir: string;
 
 beforeEach(async () => {
-  tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'fluxid-history-test-'));
-  process.env.FLUXID_DATA_DIR = tmpDir;
+  tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'florax-history-test-'));
+  process.env.FLORAX_DATA_DIR = tmpDir;
   vi.resetModules();
 });
 
 afterEach(async () => {
   await fs.rm(tmpDir, { recursive: true, force: true });
-  delete process.env.FLUXID_DATA_DIR;
+  delete process.env.FLORAX_DATA_DIR;
   vi.restoreAllMocks();
 });
 

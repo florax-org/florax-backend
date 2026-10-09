@@ -16,9 +16,9 @@ interface TourStep {
 
 const steps: TourStep[] = [
   {
-    title: "Welcome to FluxID",
+    title: "Welcome to Florax",
     content:
-      "FluxID turns any Stellar wallet into a real-time financial identity. Use the 'Show me around' button to get started.",
+      "Florax turns any Stellar wallet into a real-time financial identity. Use the 'Show me around' button to get started.",
     layout: "welcome",
     imageUrl: "/onboarding-assets/nav-dashboardUI.png",
   },
@@ -149,12 +149,12 @@ export default function Onboarding({
 
   const handleNext = () => {
     if (isWelcomeLayout) {
-      localStorage.setItem("fluxid_tour_active", "true");
+      localStorage.setItem("florax_tour_active", "true");
       router.push("/dashboard");
     } else if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      localStorage.removeItem("fluxid_tour_active");
+      localStorage.removeItem("florax_tour_active");
       onClose();
     }
   };
@@ -166,7 +166,7 @@ export default function Onboarding({
   };
 
   const handleClose = () => {
-    localStorage.removeItem("fluxid_tour_active");
+    localStorage.removeItem("florax_tour_active");
     onClose();
   };
 

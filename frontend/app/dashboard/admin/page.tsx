@@ -322,7 +322,7 @@ export default function AdminPage() {
             Admin access
           </h1>
           <p style={{ color: "var(--foreground-muted)", fontSize: 14 }} className="mb-6">
-            Connect the admin wallet to manage FluxID.
+            Connect the admin wallet to manage Florax.
           </p>
           <button onClick={connect} className="card-primary px-6 py-3 rounded-xl font-bold text-[var(--background)]">
             Connect Wallet

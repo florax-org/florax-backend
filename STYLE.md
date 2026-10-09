@@ -1,4 +1,4 @@
-# Code Style Guide - FluxID Protocol
+# Code Style Guide - Florax Protocol
 
 ## JavaScript / TypeScript (Frontend & Backend)
 

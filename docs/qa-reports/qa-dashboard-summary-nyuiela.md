@@ -1,10 +1,10 @@
 # QA Report — Dashboard score summary + on-chain save
 
-**Issue:** [#6](https://github.com/StellarVhibes/FluxID/issues/6)  
+**Issue:** [#6](https://github.com/florax-org/florax/issues/6)  
 **Tester:** nyuiela  
 **Date:** 2026-08-17 (sync re-checked 2026-08-18)  
-**App under test:** https://fluxid.vercel.app/dashboard  
-**Backend observed:** `https://fluxid.onrender.com`  
+**App under test:** https://florax.vercel.app/dashboard  
+**Backend observed:** `https://florax.onrender.com`  
 **Screenshots:** [`docs/grantfox-OSS/issue6-QA_dashboard_summary/`](../grantfox-OSS/issue6-QA_dashboard_summary/)
 
 ---
@@ -53,10 +53,10 @@ No **Low** (≥70) wallet appeared in `docs/demo-wallets.txt` or the short addit
 | ID | Severity | Area | Description |
 |----|----------|------|-------------|
 | BUG-01 | **HIGH** | Score orb / `AnimatedScore` | After re-analysis, the large center number frequently stays at **0** while the SVG ring `stroke-dasharray` already reflects the real score (e.g. testnet score **7** → dash ≈ `29 / 414.7`; High mainnet **32** → dash ≈ `132.7 / 414.7`). Users can read “0” next to a “High Risk” badge. Intermittent — later frames sometimes catch up to the true number. |
-| BUG-02 | **CRITICAL** | Save on-chain (prod backend) | `POST https://fluxid.onrender.com/wallet/{addr}/sync` with `{"network":"testnet"}` returns `success: false` and `error: "getaddrinfo ENOTFOUND rpc.testnet.stellar.org"`. That hostname does not resolve on public DNS. Repo config uses it in `backend/src/config/stellar.config.ts` (`rpcUrl: 'https://rpc.testnet.stellar.org'`). Working public RPC used elsewhere in this repo is `https://soroban-testnet.stellar.org`. **No tx hash can be captured until this is fixed and redeployed.** Same class of dead host exists for mainnet (`rpc.mainnet.stellar.org`). |
+| BUG-02 | **CRITICAL** | Save on-chain (prod backend) | `POST https://florax.onrender.com/wallet/{addr}/sync` with `{"network":"testnet"}` returns `success: false` and `error: "getaddrinfo ENOTFOUND rpc.testnet.stellar.org"`. That hostname does not resolve on public DNS. Repo config uses it in `backend/src/config/stellar.config.ts` (`rpcUrl: 'https://rpc.testnet.stellar.org'`). Working public RPC used elsewhere in this repo is `https://soroban-testnet.stellar.org`. **No tx hash can be captured until this is fixed and redeployed.** Same class of dead host exists for mainnet (`rpc.mainnet.stellar.org`). |
 | BUG-03 | **MEDIUM** | Recent Flow vs insight | For GAVA… (mainnet), Behavior Insight describes frequent **sending** / outflow-heavy behavior (`inflowCount=22`, `outflowCount=178` from API), but Recent Flow showed **14 inflows / 0 outflows**. Horizon’s newest payments for that account are currently all inflows (including dust `0.0000001` XLM). Recent Flow only samples the frontend’s capped Horizon payment list (newest ~30), so it can disagree with the overall metrics/insight and look like the wallet only receives. |
 | BUG-04 | **MEDIUM** | Save on-chain UX | Even on a successful path, `syncOnChain` returns `txHash` but the UI only toasts “Score saved on-chain” — **no hash is shown or copyable**. Acceptance asks for a captured tx hash; the product does not surface it. |
-| OBS-01 | LOW | Decorative orb PNG | Background image `fluxid_trust_score_orb.png` still shows a faint hardcoded **82**, which reads like a second score beside the live orb. |
+| OBS-01 | LOW | Decorative orb PNG | Background image `florax_trust_score_orb.png` still shows a faint hardcoded **82**, which reads like a second score beside the live orb. |
 | OBS-02 | LOW | Network toggle | Switching mainnet ↔ testnet (or pasting a new address) keeps the previous analysis visible until Analyze is clicked again. Save on-chain enables from the network toggle alone, so a user can attempt sync against a stale address/network pairing. |
 | OBS-03 | LOW | In-app feedback submit | Join Beta modal opened correctly. During this session the modal button stayed on **Sending…** for a long time after click; a direct browser `POST /feedback` with the same payload shape returned `{"success":true}`. Worth checking for hung client promises / missing timeout. |
 

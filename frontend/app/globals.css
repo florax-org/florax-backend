@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ─── FluxID Design Tokens — Dark (default) ───────────────────── */
+/* ─── Florax Design Tokens — Dark (default) ───────────────────── */
 :root {
   /* True Neumorphism: Background, Surface, and Card are all the SAME color */
   --base:            #14160E; /* A warm dark olive */
@@ -29,7 +29,7 @@
   --shadow-dark:     rgba(0, 0, 0, 0.5);
 }
 
-/* ─── FluxID Design Tokens — Light ───────────────────────────── */
+/* ─── Florax Design Tokens — Light ───────────────────────────── */
 .light {
   --base:            #E8E6DB; /* A soft, warm putty/clay color */
   --background:      var(--base);

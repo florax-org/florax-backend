@@ -47,7 +47,7 @@ export default function Home() {
   const [showOnboarding, setShowOnboarding] = useState(false);
 
   useEffect(() => {
-    const hasSeenOnboarding = localStorage.getItem("fluxid_onboarding_seen");
+    const hasSeenOnboarding = localStorage.getItem("florax_onboarding_seen");
     if (!hasSeenOnboarding) {
       setShowOnboarding(true);
     }
@@ -55,7 +55,7 @@ export default function Home() {
 
   const handleCloseOnboarding = () => {
     setShowOnboarding(false);
-    localStorage.setItem("fluxid_onboarding_seen", "true");
+    localStorage.setItem("florax_onboarding_seen", "true");
   };
 
   return (
@@ -66,7 +66,7 @@ export default function Home() {
         {/* Abstract 3D background floating behind everything */}
         <div className="absolute inset-0 flex items-center justify-end pointer-events-none overflow-hidden z-0">
           <Image
-            src="/3d-imgs-assest/fluxid_protocol_intelligence.png"
+            src="/3d-imgs-assest/florax_protocol_intelligence.png"
             alt=""
             aria-hidden
             width={1200}
@@ -101,7 +101,7 @@ export default function Home() {
             style={{ color: "var(--foreground-muted)", lineHeight: 1.65 }}
             className="text-lg sm:text-xl mb-8 max-w-lg"
           >
-            FluxID turns any Stellar wallet into a real-time financial identity.
+            Florax turns any Stellar wallet into a real-time financial identity.
             Understand how money behaves, not just how much it holds.
           </motion.p>
 
@@ -110,7 +110,7 @@ export default function Home() {
           {/* CTA */}
           <motion.div variants={item} className="flex flex-col sm:flex-row flex-wrap gap-4">
             <Link href="/dashboard" className="btn btn-primary text-sm flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3">
-              Launch FluxID <Zap size={14} />
+              Launch Florax <Zap size={14} />
             </Link>
             <Link href="#how-it-works" className="btn btn-outline text-sm flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3">
               How it Works <ArrowRight size={14} />
@@ -148,7 +148,7 @@ export default function Home() {
           >
             <Image
               src="/landing_page_assets/hero-hook.png"
-              alt="FluxID"
+              alt="Florax"
               width={500}
               height={500}
               sizes="(max-width: 1024px) 0px, 500px"
@@ -206,7 +206,7 @@ export default function Home() {
       <section id="how-it-works" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="absolute inset-0 flex items-center justify-start pointer-events-none overflow-hidden z-0">
           <Image
-            src="/3d-imgs-assest/fluxid_liquidity_flow.png"
+            src="/3d-imgs-assest/florax_liquidity_flow.png"
             alt=""
             aria-hidden
             width={900}
@@ -279,7 +279,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 flex items-end justify-end pointer-events-none z-0">
           <Image
-            src="/3d-imgs-assest/fluxid_risk_detection.png"
+            src="/3d-imgs-assest/florax_risk_detection.png"
             alt=""
             aria-hidden
             width={600}
@@ -305,14 +305,14 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 mt-6 border-t border-[var(--shadow-light)] opacity-80">
           <div className="flex items-center gap-2">
-            <Image src="/header_assets/fluxID-logo.png" alt="FluxID" width={36} height={36} />
+            <Image src="/header_assets/florax-logo.png" alt="Florax" width={36} height={36} />
             <span style={{ fontSize: 20, fontWeight: 700, letterSpacing: "0.04em" }}>
-              <span style={{ color: "#8FA828" }}>Flux</span>
-              <span style={{ color: "var(--foreground)" }}>ID</span>
+              <span style={{ color: "#8FA828" }}>Flora</span>
+              <span style={{ color: "var(--foreground)" }}>x</span>
             </span>
           </div>
           <span style={{ color: "var(--foreground-dim)", fontSize: 11 }}>
-            © 2026 FluxID · Built on Stellar
+            © 2026 Florax · Built on Stellar
           </span>
         </div>
       </footer>

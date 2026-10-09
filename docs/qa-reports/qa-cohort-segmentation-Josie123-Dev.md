@@ -3,8 +3,8 @@
 **Issue:** #7  
 **Tester:** Josie123-Dev  
 **Date:** 2026-08-18  
-**App under test:** https://fluxid.vercel.app/dashboard/protocol  
-**Backend observed:** `https://fluxid.onrender.com`  
+**App under test:** https://florax.vercel.app/dashboard/protocol  
+**Backend observed:** `https://florax.onrender.com`  
 **Screenshots:** [`docs/grantfox-OSS/issue7-QA_cohort_segmentation/`](../grantfox-OSS/issue7-QA_cohort_segmentation/)
 
 ---
@@ -52,7 +52,7 @@ All three wallets were submitted on mainnet. The app confirmed "Scored 3/3 · 0.
 
 | ID | Severity | Area | Description |
 |----|----------|------|-------------|
-| BUG-01 | **CRITICAL** | Backend availability | First visit returned `net::ERR_CONNECTION_CLOSED` when the frontend called `https://fluxid.onrender.com/protocol/wallets`. Backend appeared to be sleeping (Render free-tier cold start) or crashed. Connection dropped before any response was received. Retrying after 1-2 minutes resolved the issue. |
+| BUG-01 | **CRITICAL** | Backend availability | First visit returned `net::ERR_CONNECTION_CLOSED` when the frontend called `https://florax.onrender.com/protocol/wallets`. Backend appeared to be sleeping (Render free-tier cold start) or crashed. Connection dropped before any response was received. Retrying after 1-2 minutes resolved the issue. |
 | BUG-02 | **MEDIUM** | Error messaging | After backend reconnected, the app showed "Account not found on this network" for the connected wallet. The message does not guide the user to try a different network or a wallet with transaction history. |
 | BUG-03 | **CRITICAL** | Cohort Engine — data pipeline | After scoring 3 wallets (app confirmed "Scored 3/3 · 0.1s"), the entire Cohort Engine shows zero data: Average Liquidity Score 0.0, Active Wallets Monitored 0, Low Risk User-Base 0%, High Risk Alerts 0. All four quick segments (High Trust, Steady Earners, At Risk, Dormant Wallets) show count 0. Risk Heatmap displays "No scored wallets yet." Custom segment query with default filters returns "0 matches." The scoring endpoint appears to succeed but the cohort engine receives no wallet data. |
 | BUG-04 | **MEDIUM** | Scoring speed | Scoring completed in 0.1s for 3 wallets, which is suspiciously fast. May indicate the backend returned immediately without actually querying blockchain data, resulting in empty/null scores that the cohort engine correctly displays as zeros. |
@@ -65,7 +65,7 @@ All three wallets were submitted on mainnet. The app confirmed "Scored 3/3 · 0.
 ### Backend cold start — ERR_CONNECTION_CLOSED
 
 - First attempt to load `/dashboard/protocol` failed immediately.
-- DevTools Network tab showed the request to `https://fluxid.onrender.com/protocol/wallets` with status `(failed)` and error `net::ERR_CONNECTION_CLOSED`.
+- DevTools Network tab showed the request to `https://florax.onrender.com/protocol/wallets` with status `(failed)` and error `net::ERR_CONNECTION_CLOSED`.
 - Waited approximately 1-2 minutes, refreshed, and the backend responded.
 - This is a known issue with Render free-tier hosting but impacts UX significantly.
 

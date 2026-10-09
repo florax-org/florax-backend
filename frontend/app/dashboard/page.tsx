@@ -30,8 +30,8 @@ export default function Dashboard() {
   const [tourStartStep, setTourStartStep] = useState(0);
 
   useEffect(() => {
-    const hasSeen = localStorage.getItem("fluxid_onboarding_seen");
-    const tourActive = localStorage.getItem("fluxid_tour_active");
+    const hasSeen = localStorage.getItem("florax_onboarding_seen");
+    const tourActive = localStorage.getItem("florax_tour_active");
     if (!hasSeen || tourActive) {
       setShowOnboarding(true);
       if (tourActive) {
@@ -42,7 +42,7 @@ export default function Dashboard() {
 
   const closeOnboarding = () => {
     setShowOnboarding(false);
-    localStorage.setItem("fluxid_onboarding_seen", "true");
+    localStorage.setItem("florax_onboarding_seen", "true");
   };
 
   return (
@@ -126,7 +126,7 @@ function DashboardSummary({
       >
         <div className="absolute inset-0 flex items-center justify-end pointer-events-none z-0">
           <img 
-            src="/3d-imgs-assest/fluxid_trust_score_orb.png" 
+            src="/3d-imgs-assest/florax_trust_score_orb.png" 
             alt="Score Orb" 
             className="w-[250px] object-contain opacity-[0.15] translate-x-12 mix-blend-screen"
           />

@@ -1,4 +1,4 @@
-// Client helpers for the FluxID metrics/feedback backend.
+// Client helpers for the Florax metrics/feedback backend.
 // Mirrors lib/protocolApi.ts: reads NEXT_PUBLIC_AI_BACKEND_URL, unwraps the
 // standard { success, data } envelope, and NEVER throws — every call returns a
 // value or null so a missing/unreachable backend degrades gracefully.

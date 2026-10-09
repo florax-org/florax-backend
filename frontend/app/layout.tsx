@@ -8,23 +8,23 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fluxid.stellarvhibes.org"),
-  title: { template: "%s | FluxID", default: "FluxID — Liquidity Identity Layer on Stellar" },
+  metadataBase: new URL("https://florax.stellarvhibes.org"),
+  title: { template: "%s | Florax", default: "Florax — Liquidity Identity Layer on Stellar" },
   description:
-    "FluxID turns any wallet into a real-time financial identity. Analyze liquidity, assess risk, and build financial trust on Stellar.",
-  keywords: ["FluxID", "Liquidity Identity", "Stellar", "Soroban", "financial identity", "risk assessment", "DeFi"],
-  authors: [{ name: "FluxID" }],
-  creator: "FluxID",
+    "Florax turns any wallet into a real-time financial identity. Analyze liquidity, assess risk, and build financial trust on Stellar.",
+  keywords: ["Florax", "Liquidity Identity", "Stellar", "Soroban", "financial identity", "risk assessment", "DeFi"],
+  authors: [{ name: "Florax" }],
+  creator: "Florax",
   openGraph: {
     type: "website",
-    title: "FluxID — Liquidity Identity Layer",
+    title: "Florax — Liquidity Identity Layer",
     description: "Turn any wallet into a real-time financial identity on Stellar.",
-    siteName: "FluxID",
-    images: [{ url: "/header_assets/logo.svg", width: 44, height: 44, alt: "FluxID Logo" }],
+    siteName: "Florax",
+    images: [{ url: "/header_assets/logo.svg", width: 44, height: 44, alt: "Florax Logo" }],
   },
   twitter: {
     card: "summary",
-    title: "FluxID",
+    title: "Florax",
     description: "Liquidity Identity Layer on Stellar",
     images: ["/header_assets/logo.svg"],
   },

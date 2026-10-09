@@ -3,7 +3,7 @@
 **Issue:** [QA] Insights: AI explanation accuracy vs score  
 **Reporter:** Dev-journals  
 **Date:** 2026-08-27  
-**Environment:** Live — https://fluxid.vercel.app/dashboard/insights  
+**Environment:** Live — https://florax.vercel.app/dashboard/insights  
 **Branch tested against:** `main` (deployed to Vercel)  
 **Severity:** 🟡 CRITICAL (mainnet prep)  
 
@@ -148,7 +148,7 @@ Screenshots captured and saved in `docs/grantfox-OSS/QA-insights-Dev-journals/`:
 
 ### 🟡 OBS-1 — Render Backend 404 Endpoint Handling
 **Severity:** Medium / Infrastructure  
-**Observation:** When fetching wallet details, background request to `https://fluxid.onrender.com/onchain/wallet/[address]` returned `HTTP 404 (Not Found)`.  
+**Observation:** When fetching wallet details, background request to `https://florax.onrender.com/onchain/wallet/[address]` returned `HTTP 404 (Not Found)`.  
 **Impact:** The client UI handled this gracefully using local/mock fallback data without crashing, but production onchain API deployment on Render should be verified prior to mainnet launch.
 
 ### 🟡 OBS-2 — Tooltips for Unpriced Assets

@@ -1,6 +1,6 @@
-# FluxID API Documentation
+# Florax API Documentation
 
-Welcome to the FluxID technical documentation. Our APIs enable developers, institutions, and AI agents to leverage real-time liquidity intelligence on the Stellar network.
+Welcome to the Florax technical documentation. Our APIs enable developers, institutions, and AI agents to leverage real-time liquidity intelligence on the Stellar network.
 
 ---
 
@@ -25,11 +25,11 @@ Aggregate health metrics, behavior-based segmentation, and early warning systems
 ## Getting Started
 
 ### API Base URL
-- **Production**: `https://api.fluxid.vercel.app` (Replace with actual if different)
+- **Production**: `https://api.florax.vercel.app` (Replace with actual if different)
 - **Local Dev**: `http://localhost:3001`
 
 ### Authentication
-Currently, FluxID uses address-based analysis. For Agentic AI flows, use the [X402 Payment Required](./wallet-api.md#4-agentic-ai-x402) protocol to access premium scoring data.
+Currently, Florax uses address-based analysis. For Agentic AI flows, use the [X402 Payment Required](./wallet-api.md#4-agentic-ai-x402) protocol to access premium scoring data.
 
 ### Support
-For integration support or custom institutional requirements, reach out to the FluxID core team.
+For integration support or custom institutional requirements, reach out to the Florax core team.

@@ -6,14 +6,14 @@ import os from 'node:os';
 let tmpDir: string;
 
 beforeEach(async () => {
-  tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'fluxid-metrics-test-'));
-  process.env.FLUXID_DATA_DIR = tmpDir;
+  tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'florax-metrics-test-'));
+  process.env.FLORAX_DATA_DIR = tmpDir;
   vi.resetModules();
 });
 
 afterEach(async () => {
   await fs.rm(tmpDir, { recursive: true, force: true });
-  delete process.env.FLUXID_DATA_DIR;
+  delete process.env.FLORAX_DATA_DIR;
 });
 
 async function loadMetrics() {

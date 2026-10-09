@@ -132,8 +132,8 @@ export default function Header() {
         <div className="flex items-center gap-4 sm:gap-8">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/header_assets/fluxID-logo.png"
-              alt="FluxID"
+              src="/header_assets/florax-logo.png"
+              alt="Florax"
               width={34}
               height={42}
               className="sm:w-10 sm:h-[46px]"
@@ -142,8 +142,8 @@ export default function Header() {
               className="hidden sm:inline-block"
               style={{ fontSize: 22, fontWeight: 700, letterSpacing: "0.04em" }}
             >
-              <span style={{ color: "#8FA828" }}>Flux</span>
-              <span style={{ color: "var(--foreground)" }}>ID</span>
+              <span style={{ color: "#8FA828" }}>Flora</span>
+              <span style={{ color: "var(--foreground)" }}>x</span>
             </span>
           </Link>
         </div>

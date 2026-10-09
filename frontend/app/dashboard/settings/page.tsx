@@ -11,7 +11,7 @@ const THEME_OPTIONS = [
   { value: "system", label: "System", icon: Monitor },
 ] as const;
 
-const NOTIFICATIONS_KEY = "fluxid-notifications";
+const NOTIFICATIONS_KEY = "florax-notifications";
 
 interface NotificationPreferences {
   scoreAlerts: boolean;

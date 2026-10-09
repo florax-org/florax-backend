@@ -1,11 +1,11 @@
 import { useCallback, useSyncExternalStore } from "react";
 import type { StellarNetwork, WalletAnalysis } from "./scoring";
 
-export const LS_NETWORK = "fluxid_network";
-export const LS_ADDRESS = "fluxid_last_analyzed_address";
-export const LS_ANALYSIS = "fluxid_last_analysis";
+export const LS_NETWORK = "florax_network";
+export const LS_ADDRESS = "florax_last_analyzed_address";
+export const LS_ANALYSIS = "florax_last_analysis";
 
-const NETWORK_CHANGE_EVENT = "fluxid-network-change";
+const NETWORK_CHANGE_EVENT = "florax-network-change";
 
 export interface StoredAnalysis {
   address: string;
@@ -62,7 +62,7 @@ export function useStoredNetwork(): [StellarNetwork, (network: StellarNetwork) =
   return [network, setNetwork];
 }
 
-const ANALYSIS_CHANGE_EVENT = "fluxid-analysis-change";
+const ANALYSIS_CHANGE_EVENT = "florax-analysis-change";
 
 let analysisSnapshot: StoredAnalysis | null = null;
 let analysisRaw: string | null | undefined = undefined;

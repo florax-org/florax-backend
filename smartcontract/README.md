@@ -1,4 +1,4 @@
-# FluxID — Smart Contracts
+# Florax — Smart Contracts
 
 **Liquidity Identity Layer on Stellar** — Soroban smart contracts for on-chain score verification.
 
@@ -38,9 +38,9 @@ The smart contract architecture has been upgraded to a multi-contract system to 
 
 | File | What It Does |
 |------|------------|
-| [contract.routes.ts](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/routes/contract.routes.ts) | Soroban calls from backend |
-| [publishScore()](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/routes/contract.routes.ts#L35) | Store score |
-| [getScore()](https://github.com/StellarVhibes/FluxID/blob/main/backend/src/routes/contract.routes.ts#L71) | Read score |
+| [contract.routes.ts](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts) | Soroban calls from backend |
+| [publishScore()](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts#L35) | Store score |
+| [getScore()](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts#L71) | Read score |
 
 ---
 
@@ -82,8 +82,8 @@ soroban contract deploy --wasm target/... --network mainnet
 
 ## Related
 
-- [FluxID Frontend](https://github.com/StellarVhibes/FluxID) - Next.js PWA
-- [FluxID Backend](https://github.com/StellarVhibes/FluxID) - Node.js scoring engine
+- [Florax Frontend](https://github.com/florax-org/florax) - Next.js PWA
+- [Florax Backend](https://github.com/florax-org/florax) - Node.js scoring engine
 
 ---
 

@@ -78,7 +78,7 @@ export default function OnChainSync({ wallet, network }: Props) {
         <span
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
           style={{ background: "var(--surface)", border: "1px solid var(--border)", color: "var(--foreground-dim)" }}
-          title="The FluxID scoring contract is currently deployed on testnet. Switch the network to testnet to save a score on-chain."
+          title="The Florax scoring contract is currently deployed on testnet. Switch the network to testnet to save a score on-chain."
         >
           <ShieldCheck size={12} />
           On-chain save · testnet only
@@ -89,7 +89,7 @@ export default function OnChainSync({ wallet, network }: Props) {
           disabled={syncing}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-colors disabled:opacity-60"
           style={{ background: "var(--surface)", border: "1px solid var(--border)", color: "var(--foreground-muted)" }}
-          title="Sign and store this score on the Soroban contract (signed by the FluxID oracle)"
+          title="Sign and store this score on the Soroban contract (signed by the Florax oracle)"
         >
           {syncing ? <Loader2 size={12} className="animate-spin" /> : <UploadCloud size={12} />}
           {syncing ? "Saving…" : info ? "Update on-chain" : "Save on-chain"}

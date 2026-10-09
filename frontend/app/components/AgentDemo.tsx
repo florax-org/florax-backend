@@ -165,7 +165,7 @@ export default function AgentDemo() {
               Agent Payment Demo
             </h2>
             <p style={{ color: "var(--foreground-muted)", fontSize: 12 }}>
-              Watch an agent pay per request to unlock the paid FluxID score endpoint.
+              Watch an agent pay per request to unlock the paid Florax score endpoint.
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-# 💭 Idea Submission — FluxID + AgriTrust
+# 💭 Idea Submission — Florax + AgriTrust
 
 > Stellar Journey to Mastery — Level 4 (Green Belt) gate.
 > Submitted for the Builder Track. AgriTrust is the vertical / go-to-market proof.
@@ -7,7 +7,7 @@
 
 ## What is your idea?
 
-FluxID is programmable trust infrastructure for Stellar. It turns wallet behavior into a real-time, explainable trust score that any platform, protocol, or AI agent can query. AgriTrust is the first vertical built on top of it: a behavioral financial identity layer that lets smallholder farmers borrow against their track record instead of land titles they do not have.
+Florax is programmable trust infrastructure for Stellar. It turns wallet behavior into a real-time, explainable trust score that any platform, protocol, or AI agent can query. AgriTrust is the first vertical built on top of it: a behavioral financial identity layer that lets smallholder farmers borrow against their track record instead of land titles they do not have.
 
 ---
 
@@ -21,7 +21,7 @@ Stellar is a payments network first, which means it carries the kind of high-vol
 
 ## 3. Target Users
 
-Two layers. FluxID serves platforms and machines: lending protocols evaluating borrowers, payroll and marketplace systems checking counterparty reliability, and AI agents that pay per query to make autonomous financial decisions. AgriTrust serves the end market: smallholder farmers in West Africa first, plus the cooperatives, microlenders, and insurers who finance them. The entry wedge for early adoption is freelancers and farmers in emerging markets who feel the trust gap directly in their income.
+Two layers. Florax serves platforms and machines: lending protocols evaluating borrowers, payroll and marketplace systems checking counterparty reliability, and AI agents that pay per query to make autonomous financial decisions. AgriTrust serves the end market: smallholder farmers in West Africa first, plus the cooperatives, microlenders, and insurers who finance them. The entry wedge for early adoption is freelancers and farmers in emerging markets who feel the trust gap directly in their income.
 
 ## 4. Technical Architecture
 
@@ -39,16 +39,16 @@ The hard parts are real. Correctly classifying inflows, outflows, and swaps so a
 
 ## 6. Roadmap
 
-**MVP (done):** single-wallet scoring, explainable output, live dashboard, two deployed testnet contracts with verifiable on-chain records, API foundations. Live at fluxid.vercel.app.
+**MVP (done):** single-wallet scoring, explainable output, live dashboard, two deployed testnet contracts with verifiable on-chain records, API foundations. Live at florax.vercel.app.
 
 **User acquisition:** prove 10+ real testnet users for Green Belt, then 50+ with features driven directly by their feedback for Blue Belt. Onboard test wallets, run demo-driven validation, iterate.
 
-**Mainnet vision:** redeploy the verifiable `liquidity_identity` contract to mainnet with a self-audit, prove real mainnet usage, then launch the AgriTrust vertical on top: farmers build a behavioral identity through supplier and stablecoin activity, FluxID scores it, and VYCs unlock microcredit and parametric insurance. The long-term goal is for FluxID to become the machine-readable trust layer the Stellar ecosystem queries by default.
+**Mainnet vision:** redeploy the verifiable `liquidity_identity` contract to mainnet with a self-audit, prove real mainnet usage, then launch the AgriTrust vertical on top: farmers build a behavioral identity through supplier and stablecoin activity, Florax scores it, and VYCs unlock microcredit and parametric insurance. The long-term goal is for Florax to become the machine-readable trust layer the Stellar ecosystem queries by default.
 
 ---
 
 ## Notes for submission
 
-- The idea submission gates the Builder Track (Levels 4–7), so this leads with FluxID (the Green Belt horse) and positions AgriTrust as the vertical / go-to-market proof — the stronger pitch. A Startup Track version would lead with AgriTrust instead.
+- The idea submission gates the Builder Track (Levels 4–7), so this leads with Florax (the Green Belt horse) and positions AgriTrust as the vertical / go-to-market proof — the stronger pitch. A Startup Track version would lead with AgriTrust instead.
 - The form is a single essay field, so the six requirements are labeled sections inside one answer. They split cleanly if separate fields are needed.
 - Grounded in what is actually built: testnet only (no mainnet claim), and the AgriTrust frontend does not exist yet (contract + tests do, in a separate repo).
