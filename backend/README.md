@@ -29,18 +29,18 @@ Backend provides the **scoring engine** that calculates liquidity scores from St
 
 | File | What It Does |
 |------|------------|
-| [horizon.service.ts](https://github.com/florax-org/florax/blob/main/backend/src/services/horizon.service.ts#L7) | Horizon API client |
-| [getPayments()](https://github.com/florax-org/florax/blob/main/backend/src/services/horizon.service.ts#L36) | Fetch wallet payments |
-| [Swap filtering](https://github.com/florax-org/florax/blob/main/backend/src/services/horizon.service.ts#L62) | Exclude self-swaps |
-| [stellar.types.ts](https://github.com/florax-org/florax/blob/main/backend/src/types/stellar.types.ts) | Type definitions |
+| [horizon.service.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/services/horizon.service.ts#L7) | Horizon API client |
+| [getPayments()](https://github.com/florax-org/florax-backend/blob/main/backend/src/services/horizon.service.ts#L36) | Fetch wallet payments |
+| [Swap filtering](https://github.com/florax-org/florax-backend/blob/main/backend/src/services/horizon.service.ts#L62) | Exclude self-swaps |
+| [stellar.types.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/types/stellar.types.ts) | Type definitions |
 
 ### Soroban Contract
 
 | File | What It Does |
 |------|------------|
-| [contract.routes.ts](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts) | Contract interaction |
-| [publishScore()](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts#L35) | Store score on-chain |
-| [getScore()](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts#L71) | Read from contract |
+| [contract.routes.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/contract.routes.ts) | Contract interaction |
+| [publishScore()](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/contract.routes.ts#L35) | Store score on-chain |
+| [getScore()](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/contract.routes.ts#L71) | Read from contract |
 
 ---
 
@@ -50,10 +50,10 @@ Backend provides the **scoring engine** that calculates liquidity scores from St
 
 | File | What It Does |
 |------|------------|
-| [llm.ts](https://github.com/florax-org/florax/blob/main/backend/src/services/explainability/llm.ts#L10) | Anthropic Claude API |
-| [DEFAULT_MODEL](https://github.com/florax-org/florax/blob/main/backend/src/services/explainability/llm.ts#L11) = `claude-haiku-4-5-20251001` |
-| [index.ts](https://github.com/florax-org/florax/blob/main/backend/src/services/explainability/index.ts) | Entry point |
-| [mcp.routes.ts](https://github.com/florax-org/florax/blob/main/backend/src/routes/mcp.routes.ts#L10) | AI explainability layer |
+| [llm.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/services/explainability/llm.ts#L10) | Anthropic Claude API |
+| [DEFAULT_MODEL](https://github.com/florax-org/florax-backend/blob/main/backend/src/services/explainability/llm.ts#L11) = `claude-haiku-4-5-20251001` |
+| [index.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/services/explainability/index.ts) | Entry point |
+| [mcp.routes.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/mcp.routes.ts#L10) | AI explainability layer |
 
 **What Claude analyzes:**
 - Transaction patterns
@@ -67,9 +67,9 @@ Backend provides the **scoring engine** that calculates liquidity scores from St
 
 | File | What It Does |
 |------|------------|
-| [paid.routes.ts](https://github.com/florax-org/florax/blob/main/backend/src/routes/paid.routes.ts) | X402 endpoints |
-| [HTTP 402](https://github.com/florax-org/florax/blob/main/backend/src/routes/paid.routes.ts#L184) | Payment required response |
-| [payment.service.ts](https://github.com/florax-org/florax/blob/main/backend/src/services/payment.service.ts) | On-chain verification |
+| [paid.routes.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/paid.routes.ts) | X402 endpoints |
+| [HTTP 402](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/paid.routes.ts#L184) | Payment required response |
+| [payment.service.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/services/payment.service.ts) | On-chain verification |
 
 ---
 
@@ -79,8 +79,8 @@ Backend provides the **scoring engine** that calculates liquidity scores from St
 
 | File | What It Does |
 |------|------------|
-| [scoring.service.ts](https://github.com/florax-org/florax/blob/main/backend/src/services/scoring.service.ts) | Main scoring logic |
-| [scoring.ts utils](https://github.com/florax-org/florax/blob/main/backend/src/utils/scoring.ts) | Rule-based calculations |
+| [scoring.service.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/services/scoring.service.ts) | Main scoring logic |
+| [scoring.ts utils](https://github.com/florax-org/florax-backend/blob/main/backend/src/utils/scoring.ts) | Rule-based calculations |
 
 ### Factors Analyzed
 
@@ -128,8 +128,8 @@ npm run dev
 
 ## Related
 
-- [Florax Frontend](https://github.com/florax-org/florax) - Next.js PWA
-- [Florax Smart Contracts](https://github.com/florax-org/florax) - Soroban contracts
+- [Florax Frontend](https://github.com/florax-org/florax-backend) - Next.js PWA
+- [Florax Smart Contracts](https://github.com/florax-org/florax-backend) - Soroban contracts
 
 ---
 

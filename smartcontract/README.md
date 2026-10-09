@@ -38,9 +38,9 @@ The smart contract architecture has been upgraded to a multi-contract system to 
 
 | File | What It Does |
 |------|------------|
-| [contract.routes.ts](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts) | Soroban calls from backend |
-| [publishScore()](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts#L35) | Store score |
-| [getScore()](https://github.com/florax-org/florax/blob/main/backend/src/routes/contract.routes.ts#L71) | Read score |
+| [contract.routes.ts](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/contract.routes.ts) | Soroban calls from backend |
+| [publishScore()](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/contract.routes.ts#L35) | Store score |
+| [getScore()](https://github.com/florax-org/florax-backend/blob/main/backend/src/routes/contract.routes.ts#L71) | Read score |
 
 ---
 
@@ -82,8 +82,8 @@ soroban contract deploy --wasm target/... --network mainnet
 
 ## Related
 
-- [Florax Frontend](https://github.com/florax-org/florax) - Next.js PWA
-- [Florax Backend](https://github.com/florax-org/florax) - Node.js scoring engine
+- [Florax Frontend](https://github.com/florax-org/florax-backend) - Next.js PWA
+- [Florax Backend](https://github.com/florax-org/florax-backend) - Node.js scoring engine
 
 ---
 

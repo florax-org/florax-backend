@@ -817,7 +817,7 @@ export default function ProtocolDashboard() {
             GET /protocol/health
           </code>
           <a 
-            href="https://github.com/florax-org/florax/blob/main/docs/api-docs/README.md"
+            href="https://github.com/florax-org/florax-backend/blob/main/docs/api-docs/README.md"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--primary)] text-sm font-bold flex items-center gap-1 hover:underline"

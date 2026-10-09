@@ -1,6 +1,6 @@
 # QA Report — Dashboard score summary + on-chain save
 
-**Issue:** [#6](https://github.com/florax-org/florax/issues/6)  
+**Issue:** [#6](https://github.com/florax-org/florax-backend/issues/6)  
 **Tester:** nyuiela  
 **Date:** 2026-08-17 (sync re-checked 2026-08-18)  
 **App under test:** https://florax.vercel.app/dashboard  

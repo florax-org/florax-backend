@@ -2,7 +2,7 @@
 
 **Reviewer:** TCROWN10 (`@TCROWN10`)  
 **Date:** 2026-08-16 (walkthrough) · **Revised:** 2026-08-20 (scoped to Settings + mobile per review)  
-**Issue:** [#11](https://github.com/florax-org/florax/issues/11)  
+**Issue:** [#11](https://github.com/florax-org/florax-backend/issues/11)  
 **Severity:** CRITICAL (mainnet prep)  
 **App under test:** live deploy [https://florax.vercel.app](https://florax.vercel.app)  
 **Viewports:** 1440×900 (desktop), 375×812 (iPhone-class), 320×640 (narrow)
