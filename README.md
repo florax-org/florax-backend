@@ -9,13 +9,13 @@
 
 ## Overview
 
-Florax is a liquidity intelligence layer built on **Stellar** that turns any wallet into a real-time financial identity.
+Florax is a liquidity intelligence layer built on **Stellar** blockchain  that turns any wallet into a real-time financial identity.
 
 Instead of just showing balances, Florax analyzes **how money behaves**, inflow patterns, outflow stability, transaction frequency, and flow consistency and produces a simple, explainable trust score.
 
 > **The Problem:** Traditional finance and crypto both track what you have, but not how you behave financially. Trust becomes guesswork.
 > 
-> **Florax's Solution:** A dynamic Liquidity Identity, that analyze any Stellar wallet address without permission, get a 0-100 trust score with risk level, and understand why through AI-generated insights.
+> **Florax's Solution:** A dynamic Liquidity Identity that analyzes any Stellar wallet address without permission, get a 0-100 trust score with risk level, and explains why through AI-generated insights.
 
 ---
 
